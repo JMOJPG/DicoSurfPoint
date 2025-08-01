@@ -1,0 +1,158 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #F2B950;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Hero video section */
+.hero-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+
+.overlay-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ffffffcc;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ffffff;
+  color: #F2B950;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #eee;
+}
+
+/* Section styling */
+.intro,
+.content {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro h2,
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.intro p,
+.content p {
+  font-size: 1.1rem;
+}
+
+/* Logo button */
+.logo-link {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 10;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.overview {
+  padding: 60px 20px;
+  background-color: #fff;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.overview p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.gallery {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  color: #444;
+  text-align: center;
+}
