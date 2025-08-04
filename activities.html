@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Activities - Dico Surf Point</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <header>
     <a href="index.html" class="logo-link">
-  <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
-</a>
+      <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
+    </a>
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="rooms.html">Rooms</a>
@@ -19,19 +20,36 @@
     </nav>
   </header>
 
-  <section class="overview">
-  <h2>Things to Do</h2>
-  <p>
-    Surf lessons, reef exploring, scenic local hikes, yoga sessions, and much more await you in the untouched paradise of Simeulue. Whether you're paddling out for your first wave, snorkeling vibrant coral reefs, trekking through lush tropical trails, or unwinding with a sunset yoga class, there's something here for every kind of traveler. Our experiences are guided by locals who know the island inside and out, offering you a deeper connection to both nature and culture. Adventure, relaxation, and discovery all come together on this remote and magical island.
-  </p>
+  <div class="video-bg-container">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="gallact3.MP4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-  <div class="photo-placeholder" style="margin-top: 30px; padding: 20px; border: 2px dashed #F2B950; border-radius: 8px; color: #F2B950;">
-    Photos coming soon!
+    <div class="activities-content">
+      <h2>Things to Do</h2>
+      <p>
+        Surf lessons, reef exploring, scenic local hikes, fishing trips, and much more await you in the untouched paradise of Simeulue. Whether you're paddling out for your first wave, snorkeling vibrant coral reefs, trekking through lush tropical trails, or chasing an epic sunset from the shore, there's something here for every kind of traveler. Our experiences are guided by locals who know the island inside and out, offering you a deeper connection to both nature and culture.
+      </p>
+
+      <div class="gallery-container">
+        <video controls muted playsinline>
+          <source src="act1.MP4" type="video/mp4" />
+        </video>
+        <video controls muted playsinline>
+          <source src="gallact1.MP4" type="video/mp4" />
+        </video>
+        <video controls muted playsinline>
+          <source src="gallact2.MP4" type="video/mp4" />
+        </video>
+        <video controls muted playsinline>
+          <source src="gallact3.MP4" type="video/mp4" />
+        </video>
+      </div>
+
+      <a href="contact.html" class="btn">Contact Us to Book</a>
+    </div>
   </div>
-
-  <a href="contact.html" class="btn" style="margin-top: 30px; display: inline-block;">Contact Us to Book</a>
-</section>
-
 
   <footer>
     <p>&copy; 2025 Dico Surf Point</p>
