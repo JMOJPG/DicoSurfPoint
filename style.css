@@ -451,5 +451,159 @@ header {
   border-radius: 10px;
 }
 
+/* INFO PAGE */
 
+.info-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0e1b22, #02080c);
+  padding: 120px 6% 80px;
+  color: white;
+}
+
+.info-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.info-hero h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.info-hero p {
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.info-card h2 {
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+}
+
+.info-card p {
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.info-card ul {
+  padding-left: 18px;
+}
+
+.info-card li {
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .info-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+/* OWNER SECTION */
+
+.info-owner {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.owner-card {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.owner-card h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.owner-card p {
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+/* ==============================
+   PRICING SECTION
+================================ */
+
+.pricing {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.price-card {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #FAFAFA;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.price-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #F2B950;
+  margin-bottom: 25px;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #777;
+}
+
+.price-includes {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.price-includes li {
+  font-size: 1.05rem;
+  margin: 12px 0;
+}
+
+.price-note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 25px;
+}
 
