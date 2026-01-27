@@ -1,183 +1,182 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
- 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dico Surf Point</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* LIGHTBOX STYLING */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      cursor: pointer;
+    }
+    #lightbox img {
+      max-width: 95%;
+      max-height: 95%;
+      border-radius: 10px;
+    }
 
+    .hero-slideshow .slides img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+
+    .overlay-content {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
     <a href="index.html" class="logo-link">
-  <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
-</a>
+      <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
+    </a>
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="rooms.html">Rooms</a>
       <a href="activities.html">Activities</a>
-<a href="info.html">Info</a>
+      <a href="info.html">Info</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-<div class="hero-slideshow">
+  <div class="hero-slideshow">
+    <div class="slides active"><img src="1.JPG"></div>
+    <div class="slides"><img src="2.JPG"></div>
+    <div class="slides"><img src="3.JPG"></div>
+    <div class="slides"><img src="4.JPG"></div>
+    <div class="slides"><img src="5.JPG"></div>
+    <div class="slides"><img src="6.JPG"></div>
 
-  <div class="slides active">
-    <img src="1.JPG">
+    <div class="overlay-content">
+      <h1>Dico Surf Point</h1>
+      <p class="hero-subtitle">Carrying on the spirit of a loyal companion, surf and reset in a tropical wonderland.</p>
+      <p>Escape to Simeulue, Indonesia</p>
+      <a href="contact.html" class="btn">Book Now</a>
+    </div>
   </div>
 
-  <div class="slides">
-    <img src="2.JPG">
-  </div>
-
-  <div class="slides">
-    <img src="3.JPG">
-  </div>
-
-  <div class="slides">
-    <img src="4.JPG">
-  </div>
-
-  <div class="slides">
-    <img src="5.JPG">
-  </div>
-
-  <div class="slides">
-    <img src="6.JPG">
-  </div>
-
-  <div class="overlay-content">
-    <h1>Dico Surf Point</h1>
-    <p class="hero-subtitle">Carrying on the spirit of a loyal companion, surf and reset in a tropical wonderland.</p>
-    <p>Escape to Simeulue, Indonesia</p>
-    <a href="contact.html" class="btn">Book Now</a>
-  </div>
-
-</div>
-
-
-
-      <section class="intro">
-    <h2>Indonesia's last fronteir, Simeulue</h2>
+  <section class="intro">
+    <h2>Indonesia's last frontier, Simeulue</h2>
   </section>
-  
+
   <section class="overview">
-  <h2>About Dico Surf Point</h2>
-  <p>
-    Nestled on the untouched island of Simeulue, Dico Surf Point is more than just a place to stay, it's an experience. 
-    Named in honour of a loyal Great Dane owned by the owner of the lodge, our lodge carries that same spirit of freedom, 
-    adventure, and companionship. Our friendly and caring staff will ensure your stay is a memorable one, whether you're chasing perfect uncrowded world class waves or just need a place to unwind, Dico Surf Point welcomes you.
-  </p>
-</section>
+    <h2>About Dico Surf Point</h2>
+    <p>
+      Nestled on the untouched island of Simeulue, Dico Surf Point is more than just a place to stay, it's an experience. 
+      Named in honour of a loyal Great Dane owned by the lodge owner, our lodge carries that same spirit of freedom, 
+      adventure, and companionship. Our friendly and caring staff will ensure your stay is a memorable one, whether you're chasing perfect uncrowded world class waves or just need a place to unwind, Dico Surf Point welcomes you.
+    </p>
+  </section>
 
- <section class="gallery">
-  <h2>Gallery</h2>
-  <p>More images coming soon from the shores of Simeulue...</p>
-  
-  <div class="gallery-container">
-    <img src="FAM.jpg" class="gallery-img" />
-    <img src="14.JPG" class="gallery-img" />
-    <img src="13.JPG" class="gallery-img" />
-    <img src="15.JPG" class="gallery-img" />
-    <img src="12.JPG" class="gallery-img" />
-    <img src="7.JPG" class="gallery-img" />
-    <img src="8.JPG" class="gallery-img" />
-    <img src="9.JPG" class="gallery-img" />
-    <img src="10.JPG" class="gallery-img" />
-    <img src="11.JPG" class="gallery-img" />
-    <img src="gallery1.JPG" class="gallery-img" />
-    <img src="gallery2.JPG" class="gallery-img" />
-    <!-- Gallery Video 1 -->
-<div class="gallery-video">
-  <iframe width="100%" height="315" 
-    src="https://www.youtube.com/embed/x_DtSGkJFww?rel=0&modestbranding=1&showinfo=0" 
-    title="Gallery Video 1" frameborder="0" 
-    allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-</div>
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <p>More images coming soon from the shores of Simeulue...</p>
+    <div class="gallery-container">
+      <img src="FAM.jpg" class="gallery-img">
+      <img src="14.JPG" class="gallery-img">
+      <img src="13.JPG" class="gallery-img">
+      <img src="15.JPG" class="gallery-img">
+      <img src="12.JPG" class="gallery-img">
+      <img src="7.JPG" class="gallery-img">
+      <img src="8.JPG" class="gallery-img">
+      <img src="9.JPG" class="gallery-img">
+      <img src="10.JPG" class="gallery-img">
+      <img src="11.JPG" class="gallery-img">
+      <img src="gallery1.JPG" class="gallery-img">
+      <img src="gallery2.JPG" class="gallery-img">
 
-<!-- Gallery Video 2 -->
-<div class="gallery-video">
-  <iframe width="100%" height="315" 
-    src="https://www.youtube.com/embed/SvWYPvncung?rel=0&modestbranding=1&showinfo=0" 
-    title="Gallery Video 2" frameborder="0" 
-    allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-</div>
+      <!-- Gallery Videos -->
+      <div class="gallery-video">
+        <iframe width="100%" height="315" 
+          src="https://www.youtube.com/embed/x_DtSGkJFww?rel=0&modestbranding=1&showinfo=0" 
+          frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="gallery-video">
+        <iframe width="100%" height="315" 
+          src="https://www.youtube.com/embed/SvWYPvncung?rel=0&modestbranding=1&showinfo=0" 
+          frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="gallery-video">
+        <iframe width="100%" height="315" 
+          src="https://www.youtube.com/embed/ndE8An3wkJ4?rel=0&modestbranding=1&showinfo=0" 
+          frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="gallery-video">
+        <iframe width="100%" height="315" 
+          src="https://youtube.com/embed/FBPTe2Qa61U" 
+          frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
 
-<!-- Gallery Video 3 -->
-<div class="gallery-video">
-  <iframe width="100%" height="315" 
-    src="https://www.youtube.com/embed/ndE8An3wkJ4?rel=0&modestbranding=1&showinfo=0" 
-    title="Gallery Video 3" frameborder="0" 
-    allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-</div>
-<!-- Gallery Video 3 -->
-<div class="gallery-video">
-  <iframe width="100%" height="315" 
-    src="https://youtube.com/embed/FBPTe2Qa61U" 
-    title="Gallery Video 3" frameborder="0" 
-    allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-  </div>
-
-  <p>Follow us on Instagram!</p>
-  <div class="social-icons">
-    <a href="https://instagram.com/Dico_Surf_lodge" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-</section>
-
+    <p>Follow us on Instagram!</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/Dico_Surf_lodge" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Dico Surf Point • Simeulue, Indonesia</p>
   </footer>
- 
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".slides");
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <img id="lightbox-img">
+  </div>
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[index].classList.add("active");
-  }
+  <script>
+    // HERO SLIDESHOW
+    document.addEventListener("DOMContentLoaded", () => {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slides");
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+      }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      showSlide(0);
+      setInterval(nextSlide, 3500);
+    });
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    // GALLERY LIGHTBOX
+    const images = document.querySelectorAll(".gallery-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-  showSlide(0);
-  setInterval(nextSlide, 3500);
-});
-</script>
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
 
-<div id="lightbox">
-  <img id="lightbox-img">
-</div>
-
-<script>
-const images = document.querySelectorAll(".gallery-img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-  });
-});
-
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-</script>
-
-
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  </script>
 </body>
-
 </html>
