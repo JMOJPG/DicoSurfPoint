@@ -1,7 +1,16 @@
 /* ====================================
-   GLOBAL RESET & FONTS
+   GLOBAL RESET + VARIABLES
 ==================================== */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --gold: #F2B950;
+  --dark: #0e1b22;
+  --soft-dark: #162a33;
+  --light: #FAFAFA;
+  --text: #333;
+}
 
 * {
   margin: 0;
@@ -13,81 +22,86 @@ html, body {
   min-height: 100%;
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
-  background-color: #FAFAFA;
-  color: #333;
+  background: var(--light);
+  color: var(--text);
   line-height: 1.6;
   text-align: center;
   padding-top: 80px;
 }
 
-/* ================================
-   HEADER / NAVBAR
-================================ */
+/* ====================================
+   HEADER — GLASSY SURF CAMP FEEL
+==================================== */
+
 header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: #fff;
   z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 10px 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+  padding: 12px 0;
 }
 
 .logo-link {
   position: absolute;
   top: 15px;
-  left: 20px;
-  z-index: 11;
+  left: 24px;
 }
 
 .logo {
-  height: 50px;
-  width: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  height: 52px;
+  transition: transform .4s ease;
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
+/* NAVBAR */
+
 .navbar {
-  background-color: #fff;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
   max-width: 1200px;
-  gap: 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .navbar a {
-  color: #4A4A4A;
-  font-weight: bold;
   text-decoration: none;
-  padding: 10px 15px;
-  font-size: 1.15rem;
-  transition: all 0.3s ease;
+  color: #444;
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+  padding: 6px 4px;
+  transition: .3s;
 }
 
-.navbar a:hover {
-  background-color: #F2B950;
-  color: #fff;
-  border-radius: 4px;
+/* Underline hover instead of box */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--gold);
+  transition: .3s;
 }
 
-/* ================================
-   HERO SLIDESHOW
-================================ */
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ====================================
+   HERO SLIDESHOW — FILM / CINEMATIC
+==================================== */
+
 .hero-slideshow {
   position: relative;
   height: 100vh;
-  width: 100%;
   overflow: hidden;
   background: black;
 }
@@ -96,171 +110,181 @@ header {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1.4s ease;
 }
 
 .hero-slideshow .slides.active {
   opacity: 1;
-  z-index: 2;
 }
 
 .hero-slideshow img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills screen, crops if needed */
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: transform 6s ease;
 }
 
-.hero-slideshow .overlay-content {
-  position: absolute;
-  z-index: 5;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
+.hero-slideshow .slides.active img {
+  transform: scale(1);
 }
 
-.hero-slideshow .overlay-content h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #f5f5f5;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #333;
-  color: #f2b950;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #f2b950;
-  color: #333;
-}
-
-/* Dark overlay for slideshow */
+/* Dark cinematic overlay */
 .hero-slideshow::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background:
+    linear-gradient(to bottom,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.65));
   z-index: 3;
 }
 
-/* ================================
-   GALLERY
-================================ */
+/* HERO TEXT */
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 5;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.overlay-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.6rem);
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: .95;
+  margin-bottom: 26px;
+}
+
+/* BUTTON — PREMIUM FEEL */
+
+.btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #222;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .35s;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(0,0,0,.35);
+}
+
+/* ====================================
+   SECTIONS — MORE LUXURY SPACING
+==================================== */
+
+section {
+  padding: 90px 20px;
+}
+
+.overview {
+  background: white;
+}
+
+.gallery {
+  background: linear-gradient(to bottom, #f4f7f8, #eaf1f2);
+}
+
+section h2 {
+  font-family: 'Montserrat';
+  font-size: 2.3rem;
+  margin-bottom: 24px;
+}
+
+/* ====================================
+   GALLERY — MAGAZINE STYLE
+==================================== */
+
 .gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .gallery-container img,
 .gallery-container iframe {
-  width: 280px;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  object-fit: cover;
-  cursor: pointer;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0,0,0,.18);
+  transition: .5s;
 }
+
+.gallery-container img:hover,
+.gallery-container iframe:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,0,0,.28);
+}
+
+/* ====================================
+   LIGHTBOX
+==================================== */
 
 #lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,.95);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  cursor: pointer;
 }
 
-#lightbox img,
-#lightbox iframe {
-  max-width: 95%;
-  max-height: 95%;
-  border-radius: 10px;
+#lightbox img {
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 14px;
 }
 
-/* ================================
-   ACTIVITIES VIDEO
-================================ */
-.video-bg-container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  background: #000;
-}
-
-.video-bg-container iframe.bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 0;
-  filter: brightness(0.4);
-  pointer-events: none;
-}
+/* ====================================
+   ACTIVITIES — CLEAN DARK MODE SECTION
+==================================== */
 
 .activities-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  margin: -180px auto 100px auto;
-  background: rgba(242, 185, 80, 0.92);
-  padding: 50px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  color: #333;
+  max-width: 900px;
+  margin: auto;
+  background: var(--dark);
+  color: white;
+  padding: 60px;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.4);
 }
 
-.activities-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.activities-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-/* ================================
-   REMOVE CONFLICTS
-================================ */
-.video-bg-container,
-.activities-container,
-.activities-hero-old {
-  display: none !important; /* keep .hero-slideshow visible */
-}
-
-/* ================================
+/* ====================================
    MOBILE
-================================ */
+==================================== */
+
 @media (max-width: 768px) {
-  .hero-slideshow .overlay-content {
-    font-size: 0.9rem;
-    padding: 10px;
+
+  .navbar {
+    gap: 20px;
+    font-size: .9rem;
   }
+
+  .overlay-content {
+    padding: 16px;
+  }
+
+  section {
+    padding: 70px 20px;
+  }
+
 }
