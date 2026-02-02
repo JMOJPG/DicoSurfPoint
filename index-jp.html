@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ディコサーフポイント | Simeulue</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style-jp.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="index-jp.html" class="logo-link">
+      <img src="DSL.png.png" alt="ディコサーフロッジ ロゴ" class="logo" />
+    </a>
+    <nav class="navbar">
+      <a href="index-jp.html">ホーム</a>
+      <a href="rooms-jp.html">部屋</a>
+      <a href="activities-jp.html">アクティビティ</a>
+      <a href="info-jp.html">情報</a>
+      <a href="contact-jp.html">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <!-- HERO SLIDESHOW -->
+  <div class="hero-slideshow">
+    <div class="slides active"><img src="1.JPG" alt="サーフィン"></div>
+    <div class="slides"><img src="2.JPG" alt="ビーチ"></div>
+    <div class="slides"><img src="3.JPG" alt="宿泊施設"></div>
+    <div class="slides"><img src="4.JPG" alt="景観"></div>
+
+    <div class="overlay-content">
+      <h1>ディコサーフポイント</h1>
+      <p class="hero-subtitle">忠実な仲間の精神を受け継ぎ、トロピカルな楽園でサーフ＆リセット。</p>
+      <p>インドネシア、シムルエ島へようこそ</p>
+      <a href="contact-jp.html" class="btn">予約する</a>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <h2>インドネシア最後のフロンティア、シムルエ島</h2>
+    <p>人里離れた美しい島で、未体験のサーフ体験をお届けします。</p>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="overview">
+    <h2>ディコサーフポイントについて</h2>
+    <p>
+      ディコサーフポイントは、ただ泊まる場所ではなく、体験そのものです。
+      ロッジのオーナーが飼っていた忠実なグレートデーン犬の名前にちなんで名付けられ、
+      自由、冒険、仲間との絆の精神を受け継いでいます。
+      世界クラスの波を求める方も、ただリラックスしたい方も、
+      フレンドリーなスタッフが忘れられない滞在をお約束します。
+    </p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <h2>ギャラリー</h2>
+    <p>シムルエ島の風景をお楽しみください。</p>
+    <div class="gallery-container">
+      <img src="FAM.jpg" alt="家族" class="gallery-img">
+      <img src="14.JPG" alt="ビーチ" class="gallery-img">
+      <img src="13.JPG" alt="サーフィン" class="gallery-img">
+      <img src="15.JPG" alt="ロッジ" class="gallery-img">
+
+      <!-- Gallery Videos -->
+      <div class="gallery-video">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/x_DtSGkJFww?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="gallery-video">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/SvWYPvncung?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <p>Instagramでフォローしてください！</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/Dico_Surf_lodge" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 ディコサーフポイント • シムルエ島, インドネシア</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <img id="lightbox-img" alt="拡大画像">
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // HERO SLIDESHOW
+    document.addEventListener("DOMContentLoaded", () => {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slides");
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+      }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      showSlide(0);
+      setInterval(nextSlide, 3500);
+    });
+
+    // GALLERY LIGHTBOX
+    const images = document.querySelectorAll(".gallery-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  </script>
+</body>
+</html>

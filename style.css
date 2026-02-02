@@ -1,16 +1,7 @@
 /* ====================================
-   GLOBAL RESET + VARIABLES
+   GLOBAL RESET & FONTS
 ==================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
-
-:root {
-  --gold: #F2B950;
-  --dark: #0e1b22;
-  --soft-dark: #162a33;
-  --light: #FAFAFA;
-  --text: #333;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Noto+Sans+JP&display=swap');
 
 * {
   margin: 0;
@@ -21,270 +12,244 @@
 html, body {
   min-height: 100%;
   overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif;
-  background: var(--light);
-  color: var(--text);
+  font-family: 'Open Sans', 'Noto Sans JP', sans-serif;
+  background-color: #FAFAFA;
+  color: #333;
   line-height: 1.6;
   text-align: center;
   padding-top: 80px;
 }
 
 /* ====================================
-   HEADER — GLASSY SURF CAMP FEEL
+   HEADER / NAVBAR
 ==================================== */
-
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  background-color: #fff;
   z-index: 100;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.85);
-  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
-  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 0;
 }
 
 .logo-link {
   position: absolute;
   top: 15px;
-  left: 24px;
+  left: 20px;
+  z-index: 11;
 }
 
 .logo {
-  height: 52px;
-  transition: transform .4s ease;
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
-/* NAVBAR */
-
 .navbar {
-  max-width: 1200px;
-  margin: auto;
+  background-color: #fff;
+  padding: 15px 20px;
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  gap: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .navbar a {
+  color: #4A4A4A;
+  font-weight: bold;
   text-decoration: none;
-  color: #444;
-  font-weight: 600;
-  font-size: 1.05rem;
-  position: relative;
-  padding: 6px 4px;
-  transition: .3s;
+  padding: 10px 15px;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
 }
 
-/* Underline hover instead of box */
-.navbar a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: var(--gold);
-  transition: .3s;
-}
-
-.navbar a:hover::after {
-  width: 100%;
+.navbar a:hover {
+  background-color: #F2B950;
+  color: #fff;
+  border-radius: 4px;
 }
 
 /* ====================================
-   HERO SLIDESHOW — FILM / CINEMATIC
+   HERO SECTIONS
 ==================================== */
-
-.hero-slideshow {
+.hero-slideshow, .video-bg-container {
   position: relative;
-  height: 100vh;
+  width: 100%;
+  min-height: 80vh;
   overflow: hidden;
   background: black;
 }
 
-.hero-slideshow .slides {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 1.4s ease;
-}
-
-.hero-slideshow .slides.active {
-  opacity: 1;
-}
-
-.hero-slideshow img {
+.hero-slideshow img, .video-bg-container iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.05);
-  transition: transform 6s ease;
 }
-
-.hero-slideshow .slides.active img {
-  transform: scale(1);
-}
-
-/* Dark cinematic overlay */
-.hero-slideshow::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom,
-      rgba(0,0,0,.35),
-      rgba(0,0,0,.65));
-  z-index: 3;
-}
-
-/* HERO TEXT */
 
 .overlay-content {
   position: absolute;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  z-index: 5;
-  max-width: 700px;
-  padding: 20px;
+  text-align: center;
 }
 
 .overlay-content h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 3.6rem);
-  letter-spacing: 1px;
-  margin-bottom: 18px;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
-  opacity: .95;
-  margin-bottom: 26px;
+  font-weight: 300;
+  color: #f5f5f5;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-
-/* BUTTON — PREMIUM FEEL */
 
 .btn {
   display: inline-block;
-  padding: 14px 34px;
-  border-radius: 999px;
-  background: var(--gold);
-  color: #222;
-  font-weight: 700;
+  padding: 12px 25px;
+  background-color: #333;
+  color: #f2b950;
   text-decoration: none;
-  transition: .35s;
-  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 35px rgba(0,0,0,.35);
+  background-color: #f2b950;
+  color: #333;
 }
 
 /* ====================================
-   SECTIONS — MORE LUXURY SPACING
+   SECTIONS
 ==================================== */
-
 section {
-  padding: 90px 20px;
+  padding: 60px 20px;
 }
 
-.overview {
-  background: white;
+.overview, .info-page, .contact {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.gallery {
-  background: linear-gradient(to bottom, #f4f7f8, #eaf1f2);
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-section h2 {
-  font-family: 'Montserrat';
-  font-size: 2.3rem;
-  margin-bottom: 24px;
+/* Info cards */
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
-/* ====================================
-   GALLERY — MAGAZINE STYLE
-==================================== */
+.info-card, .owner-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  max-width: 400px;
+  flex: 1 1 300px;
+}
 
+.info-card ul {
+  list-style: inside disc;
+}
+
+/* Gallery */
 .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
-  max-width: 1200px;
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .gallery-container img,
 .gallery-container iframe {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 20px 45px rgba(0,0,0,.18);
-  transition: .5s;
+  width: 280px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  object-fit: cover;
+  cursor: pointer;
 }
-
-.gallery-container img:hover,
-.gallery-container iframe:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,.28);
-}
-
-/* ====================================
-   LIGHTBOX
-==================================== */
 
 #lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.95);
+  background: rgba(0,0,0,0.9);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  cursor: pointer;
 }
 
-#lightbox img {
-  max-width: 92%;
-  max-height: 92%;
-  border-radius: 14px;
+#lightbox img,
+#lightbox iframe {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 10px;
 }
 
-/* ====================================
-   ACTIVITIES — CLEAN DARK MODE SECTION
-==================================== */
-
-.activities-content {
-  max-width: 900px;
-  margin: auto;
-  background: var(--dark);
-  color: white;
-  padding: 60px;
-  border-radius: 22px;
-  box-shadow: 0 30px 60px rgba(0,0,0,.4);
+/* Footer */
+footer {
+  background: #333;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 30px 0;
 }
 
-/* ====================================
-   MOBILE
-==================================== */
+/* Social icons */
+.social-icons a {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
 
+.social-icons a:hover {
+  color: #F2B950;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .hero-slideshow .overlay-content,
+  .video-bg-container .overlay-content {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 
   .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-container {
+    flex-direction: column;
     gap: 20px;
-    font-size: .9rem;
   }
-
-  .overlay-content {
-    padding: 16px;
-  }
-
-  section {
-    padding: 70px 20px;
-  }
-
 }

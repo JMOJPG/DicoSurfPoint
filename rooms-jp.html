@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>客室 - Dico Surf Point</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="シムルエ島のサーフィンロッジ、Dico Surf Pointの客室をご紹介。快適で自然に囲まれた滞在をお楽しみください。">
+  <meta name="keywords" content="シムルエ, ロッジ, 客室, 宿泊, サーフィン, インドネシア">
+  <link rel="alternate" hreflang="ja" href="rooms-jp.html" />
+  <link rel="alternate" hreflang="en" href="rooms.html" />
+</head>
+<body>
+  <header>
+    <a href="index-jp.html" class="logo-link">
+      <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
+    </a>
+    <nav class="navbar">
+      <a href="index-jp.html">ホーム</a>
+      <a href="rooms-jp.html">客室</a>
+      <a href="activities-jp.html">アクティビティ</a>
+      <a href="info-jp.html">情報</a>
+      <a href="contact-jp.html">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <section class="overview">
+    <h2>客室のご案内</h2>
+    <h2 class="rooms-subtitle">2〜4名様用の客室</h2>
+    <p>
+      友人同士、カップル、小さなご家族に最適な2〜4名様用の客室は、
+      旅行やサーフィンで疲れた後にゆったりとくつろげる快適な空間です。
+      各客室には快適なベッド、エアコン、広々とした収納スペースが備わっており、
+      次のサーフィンセッションに向けてしっかりと充電できます。
+      海の景色と新鮮な空気で目覚める贅沢なひとときをお楽しみください。
+    </p>
+
+    <section class="pricing">
+      <h2>客室料金</h2>
+      <div class="price-card">
+        <h3>ローシーズン料金</h3>
+        <div class="price">¥10,000 <span>/ 1泊</span></div>
+        <ul class="price-includes">
+          <li>✔ 空港送迎付き</li>
+          <li>✔ 1日3食付き</li>
+          <li>✔ スクーターレンタル込み</li>
+          <li>✔ オプションでサーフガイド可</li>
+          <li>✔ 快適なプライベートルーム（2〜4名様）</li>
+        </ul>
+        <p class="price-note">
+          *料金はピークシーズンや祝日により変動する場合があります。
+        </p>
+        <a href="contact-jp.html" class="btn">お問い合わせ・予約</a>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>客室ギャラリー</h2>
+      <p>島の自然光と海風を感じられる快適な客室。</p>
+
+      <div class="gallery-container">
+        <img src="17.JPG" alt="ツインルーム内装" class="gallery-img">
+        <img src="18.JPG" alt="自然光が差し込む客室" class="gallery-img">
+        <img src="19.JPG" alt="共有ラウンジ" class="gallery-img">
+        <img src="20.JPG" alt="共有ラウンジ" class="gallery-img">
+        <img src="21.JPG" alt="共有ラウンジ" class="gallery-img">
+        <img src="22.JPG" alt="共有ラウンジ" class="gallery-img">
+      </div>
+    </section>
+
+    <a href="contact-jp.html" class="btn" style="margin-top: 30px; display: inline-block;">ご予約はこちら</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dico Surf Point • シムルエ, インドネシア</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <img id="lightbox-img">
+  </div>
+
+  <script>
+    // GALLERY LIGHTBOX
+    const images = document.querySelectorAll(".gallery-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  </script>
+</body>
+</html>

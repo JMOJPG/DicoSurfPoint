@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アクティビティ – Dico Surf Point</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="description" content="シムルエ島でのサーフィンや探索、シュノーケリングなど、Dico Surf Pointのアクティビティをご紹介。">
+  <meta name="keywords" content="シムルエ, サーフィン, アクティビティ, ロッジ, インドネシア, 島の体験">
+  <link rel="alternate" hreflang="ja" href="activities-jp.html" />
+  <link rel="alternate" hreflang="en" href="activities.html" />
+</head>
+
+<body>
+
+<header>
+  <a href="index-jp.html" class="logo-link">
+    <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
+  </a>
+
+  <nav class="navbar">
+    <a href="index-jp.html">ホーム</a>
+    <a href="rooms-jp.html">客室</a>
+    <a href="activities-jp.html">アクティビティ</a>
+    <a href="info-jp.html">情報</a>
+    <a href="contact-jp.html">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- ================= HERO VIDEO ================= -->
+<section class="video-bg-container">
+  <iframe
+    class="bg-video"
+    src="https://www.youtube.com/embed/ndE8An3wkJ4?autoplay=1&mute=1&loop=1&playlist=ndE8An3wkJ4&controls=0&modestbranding=1"
+    frameborder="0"
+    allow="autoplay; fullscreen"
+    allowfullscreen>
+  </iframe>
+
+  <div class="overlay-content">
+    <h1>島での楽しみ方</h1>
+    <p class="hero-subtitle">サーフィン、探索、ゆったり過ごす、そして繰り返す</p>
+  </div>
+</section>
+
+<!-- ================= TEXT CONTENT ================= -->
+<section class="overview">
+  <h2>シムルエでの暮らし</h2>
+  <p>
+    人の少ないリーフブレイクや村をゆっくりスクーターで回る体験など、
+    シムルエは世界クラスの波だけでなく多彩な楽しみを提供します。  
+    ガイド付きのサーフセッション、釣り、シュノーケリング、海岸探索、夕日鑑賞、そして島の文化体験も可能です。
+    <br><br>
+    波を追いかけるためでも、ただ島でリラックスしたいだけでも、
+    Dico Surf Pointは落ち着いた拠点となり、あなた自身のペースで島を満喫できます。
+  </p>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery">
+  <h2>アクティビティギャラリー</h2>
+
+  <div class="gallery-container">
+
+    <!-- IMAGES -->
+    <img src="14.JPG" alt="シムルエでのサーフィン" class="gallery-img">
+    <img src="23.JPG" alt="リーフブレイク" class="gallery-img">
+    <img src="24.JPG" alt="島の探索" class="gallery-img">
+    <img src="5.JPG" alt="海の景色" class="gallery-img">
+
+    <!-- VIDEOS -->
+    <div class="gallery-video">
+      <iframe src="https://www.youtube.com/embed/lIMYur6yd_4" allowfullscreen></iframe>
+    </div>
+
+    <div class="gallery-video">
+      <iframe src="https://www.youtube.com/embed/wcGcolNKXbM" allowfullscreen></iframe>
+    </div>
+
+    <div class="gallery-video">
+      <iframe src="https://www.youtube.com/embed/qOeO8WqzzUA" allowfullscreen></iframe>
+    </div>
+
+    <div class="gallery-video">
+      <iframe src="https://www.youtube.com/embed/y3xXFZfATFE" allowfullscreen></iframe>
+    </div>
+
+    <div class="gallery-video">
+      <iframe src="https://www.youtube.com/embed/Z2Hx9m3RH30" allowfullscreen></iframe>
+    </div>
+
+    <div class="gallery-video">
+      <iframe src="https://www.youtube.com/embed/XzsqfJU24Hc" allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+  <a href="contact-jp.html" class="btn">予約・お問い合わせはこちら</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Dico Surf Point • シムルエ, インドネシア</p>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+  <iframe id="lightbox-video" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<script>
+const images = document.querySelectorAll(".gallery-img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxVideo = document.getElementById("lightbox-video");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxVideo.style.display = "none";
+    lightboxImg.style.display = "block";
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  });
+});
+
+document.querySelectorAll(".gallery-video iframe").forEach(video => {
+  video.addEventListener("click", (e) => {
+    e.stopPropagation();
+    lightboxImg.style.display = "none";
+    lightboxVideo.style.display = "block";
+    lightboxVideo.src = video.src + "?autoplay=1";
+    lightbox.style.display = "flex";
+  });
+});
+
+function closeLightbox() {
+  lightboxVideo.src = "";
+  lightbox.style.display = "none";
+}
+</script>
+
+</body>
+</html>
