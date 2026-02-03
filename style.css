@@ -1,7 +1,7 @@
 /* ====================================
    GLOBAL RESET & FONTS
 ==================================== */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300;400&display=swap');
 
 * {
   margin: 0;
@@ -12,12 +12,13 @@
 html, body {
   min-height: 100%;
   overflow-x: hidden;
-  font-family: 'Open Sans', 'Noto Sans JP', sans-serif;
-  background-color: #faf8f3; /* soft off-white for warmth */
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(160deg, #fefefe 0%, #fff8f0 100%);
+  color: #1A1A1A;
+  line-height: 1.75;
   text-align: center;
   padding-top: 80px;
+  scroll-behavior: smooth;
 }
 
 /* ====================================
@@ -28,32 +29,29 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 100;
+  background-color: rgba(255,255,255,0.95);
+  z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 25px rgba(0,0,0,0.2);
-  padding: 10px 0;
-  backdrop-filter: blur(10px);
+  align-items: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  padding: 12px 0;
 }
 
 .logo-link {
   position: absolute;
-  top: 15px;
-  left: 20px;
-  z-index: 11;
+  top: 10px;
+  left: 25px;
 }
 
 .logo {
   height: 55px;
-  width: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .navbar {
@@ -61,98 +59,109 @@ header {
   justify-content: center;
   gap: 35px;
   max-width: 1200px;
-  width: 100%;
+  padding: 0 20px;
 }
 
 .navbar a {
-  color: #4a4a4a;
-  font-weight: 700;
+  font-weight: 600;
+  color: #4A4A4A;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px 18px;
   font-size: 1.15rem;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-  background: linear-gradient(45deg, #f2b950, #f2d76a);
+  background-color: #F2B950;
   color: #fff;
-  box-shadow: 0 4px 20px rgba(242, 185, 80, 0.5);
+}
+
+/* Hamburger Menu for Mobile */
+.navbar-toggle {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 6px 0;
+  background: #1A1A1A;
+  transition: 0.4s;
 }
 
 /* ====================================
-   HERO SLIDESHOW / VIDEO
+   HERO SLIDESHOW
 ==================================== */
-.hero-slideshow, .video-bg-container {
+.hero-slideshow {
   position: relative;
   width: 100%;
   min-height: 90vh;
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
 }
 
 .hero-slideshow .slides {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  object-fit: cover;
 }
 
 .hero-slideshow .slides.active {
   opacity: 1;
-}
-
-.hero-slideshow img, .video-bg-container iframe {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.65) saturate(1.2); /* luxe tropical look */
+  transform: scale(1.05);
+  z-index: 1;
 }
 
 .overlay-content {
   position: absolute;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
   text-align: center;
-  z-index: 10;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+  color: white;
 }
 
 .overlay-content h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
   margin-bottom: 15px;
-  letter-spacing: 1px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-.hero-subtitle {
+.overlay-content .hero-subtitle {
   font-size: 1.3rem;
   font-weight: 300;
   color: #f5f5f5;
-  margin-bottom: 25px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
 }
 
-.overlay-content .btn {
-  display: inline-block;
-  padding: 14px 30px;
-  background: linear-gradient(45deg, #f2b950, #f2d76a);
-  color: #000;
-  text-decoration: none;
-  border-radius: 10px;
+.btn {
+  padding: 14px 32px;
+  background-color: #1A1A1A;
+  color: #F2B950;
   font-weight: 700;
+  border-radius: 10px;
   font-size: 1.1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 6px 20px rgba(242, 185, 80, 0.5);
+  transition: all 0.3s ease;
 }
 
-.overlay-content .btn:hover {
+.btn:hover {
+  background-color: #F2B950;
+  color: #1A1A1A;
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(242, 185, 80, 0.8);
 }
 
 /* ====================================
@@ -170,65 +179,67 @@ section {
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 25px;
-  color: #222;
+  letter-spacing: 1px;
+  color: #1A1A1A;
 }
 
-/* Cards (Info / Rooms / Owner) */
-.info-container, .gallery-container {
+/* INFO CARDS */
+.info-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 35px;
   justify-content: center;
 }
 
 .info-card, .owner-card {
-  background: #fff;
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  max-width: 400px;
+  background: #fffefc;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
   flex: 1 1 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-card:hover, .owner-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  max-width: 400px;
 }
 
 .info-card ul {
   list-style: inside disc;
-  padding-left: 15px;
+  margin-top: 12px;
 }
 
-/* Gallery Images */
+/* GALLERY */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
 .gallery-container img,
 .gallery-container iframe {
   width: 280px;
   max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
   cursor: pointer;
+  object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-container img:hover,
 .gallery-container iframe:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  transform: scale(1.05);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
 }
 
-/* Lightbox */
+/* LIGHTBOX */
 #lightbox {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.95);
   display: none;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 9999;
   cursor: pointer;
 }
@@ -238,27 +249,28 @@ h2 {
   max-width: 95%;
   max-height: 95%;
   border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  background: #222;
-  color: #f5f5f5;
+  background: #1A1A1A;
+  color: #F2B950;
   text-align: center;
   padding: 40px 0;
   font-size: 0.95rem;
 }
 
-/* Social icons */
+/* SOCIAL ICONS */
 .social-icons a {
-  color: #333;
   font-size: 1.6rem;
+  color: #1A1A1A;
   margin: 0 12px;
   transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #f2b950;
+  color: #F2B950;
 }
 
 /* ====================================
@@ -268,8 +280,8 @@ footer {
   .overlay-content h1 {
     font-size: 2.5rem;
   }
-  .hero-subtitle {
-    font-size: 1.1rem;
+  .overlay-content p {
+    font-size: 1.15rem;
   }
 }
 
@@ -277,30 +289,28 @@ footer {
   .navbar {
     flex-direction: column;
     gap: 12px;
-    padding: 15px 0;
+    padding: 15px 20px;
+    display: none; /* will toggle with hamburger */
   }
 
-  .overlay-content {
-    font-size: 0.9rem;
-    padding: 10px;
+  .navbar.active {
+    display: flex;
   }
 
-  .hero-slideshow {
-    min-height: 60vh;
+  .navbar-toggle {
+    display: block;
   }
 
-  h2 {
-    font-size: 1.7rem;
+  .overlay-content h1 {
+    font-size: 2rem;
   }
 
-  .info-card, .owner-card {
-    max-width: 100%;
-    padding: 25px;
+  .overlay-content .hero-subtitle {
+    font-size: 1rem;
   }
 
   .gallery-container img,
   .gallery-container iframe {
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
   }
 }
