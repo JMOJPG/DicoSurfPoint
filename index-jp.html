@@ -1,128 +1,216 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ディコサーフポイント | Simeulue</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-jp.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-  <header>
-    <a href="index-jp.html" class="logo-link">
-      <img src="DSL.png.png" alt="ディコサーフロッジ ロゴ" class="logo" />
-    </a>
-    <nav class="navbar">
-      <a href="index-jp.html">ホーム</a>
-      <a href="rooms-jp.html">部屋</a>
-      <a href="activities-jp.html">アクティビティ</a>
-      <a href="info-jp.html">情報</a>
-      <a href="contact-jp.html">お問い合わせ</a>
-    </nav>
-  </header>
+/* ====================================
+   JAPANESE PAGE OVERRIDES - LUXURIOUS
+==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap');
 
-  <!-- HERO SLIDESHOW -->
-  <div class="hero-slideshow">
-    <div class="slides active"><img src="1.JPG" alt="サーフィン"></div>
-    <div class="slides"><img src="2.JPG" alt="ビーチ"></div>
-    <div class="slides"><img src="3.JPG" alt="宿泊施設"></div>
-    <div class="slides"><img src="4.JPG" alt="景観"></div>
+/* BODY & TYPOGRAPHY */
+body {
+  font-family: 'Noto Sans JP', 'Open Sans', sans-serif;
+  line-height: 1.75;
+  color: #333;
+  background: linear-gradient(160deg, #fefefe 0%, #fff8f0 100%);
+  padding-top: 80px;
+}
 
-    <div class="overlay-content">
-      <h1>ディコサーフポイント</h1>
-      <p class="hero-subtitle">忠実な仲間の精神を受け継ぎ、トロピカルな楽園でサーフ＆リセット。</p>
-      <p>インドネシア、シムルエ島へようこそ</p>
-      <a href="contact-jp.html" class="btn">予約する</a>
-    </div>
-  </div>
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  color: #1A1A1A;
+}
 
-  <!-- INTRO -->
-  <section class="intro">
-    <h2>インドネシア最後のフロンティア、シムルエ島</h2>
-    <p>人里離れた美しい島で、未体験のサーフ体験をお届けします。</p>
-  </section>
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 
-  <!-- OVERVIEW -->
-  <section class="overview">
-    <h2>ディコサーフポイントについて</h2>
-    <p>
-      ディコサーフポイントは、ただ泊まる場所ではなく、体験そのものです。
-      ロッジのオーナーが飼っていた忠実なグレートデーン犬の名前にちなんで名付けられ、
-      自由、冒険、仲間との絆の精神を受け継いでいます。
-      世界クラスの波を求める方も、ただリラックスしたい方も、
-      フレンドリーなスタッフが忘れられない滞在をお約束します。
-    </p>
-  </section>
+h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
 
-  <!-- GALLERY -->
-  <section class="gallery">
-    <h2>ギャラリー</h2>
-    <p>シムルエ島の風景をお楽しみください。</p>
-    <div class="gallery-container">
-      <img src="FAM.jpg" alt="家族" class="gallery-img">
-      <img src="14.JPG" alt="ビーチ" class="gallery-img">
-      <img src="13.JPG" alt="サーフィン" class="gallery-img">
-      <img src="15.JPG" alt="ロッジ" class="gallery-img">
+/* NAVBAR */
+.navbar {
+  background-color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 25px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
 
-      <!-- Gallery Videos -->
-      <div class="gallery-video">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/x_DtSGkJFww?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="gallery-video">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/SvWYPvncung?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
+.navbar a {
+  font-size: 1rem;
+  padding: 8px 12px;
+  font-weight: 600;
+  color: #4A4A4A;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
 
-    <p>Instagramでフォローしてください！</p>
-    <div class="social-icons">
-      <a href="https://instagram.com/Dico_Surf_lodge" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-  </section>
+.navbar a:hover {
+  background-color: #C59D5F;
+  color: #fff;
+}
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 ディコサーフポイント • シムルエ島, インドネシア</p>
-  </footer>
+/* LOGO */
+.logo {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox">
-    <img id="lightbox-img" alt="拡大画像">
-  </div>
+.logo:hover {
+  transform: scale(1.08);
+}
 
-  <!-- SCRIPTS -->
-  <script>
-    // HERO SLIDESHOW
-    document.addEventListener("DOMContentLoaded", () => {
-      let currentSlide = 0;
-      const slides = document.querySelectorAll(".slides");
-      function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove("active"));
-        slides[index].classList.add("active");
-      }
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-      showSlide(0);
-      setInterval(nextSlide, 3500);
-    });
+/* HERO SLIDESHOW */
+.hero-slideshow, .video-bg-container {
+  min-height: 85vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/hero-bg-jp.jpg') center/cover no-repeat;
+}
 
-    // GALLERY LIGHTBOX
-    const images = document.querySelectorAll(".gallery-img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    images.forEach(img => {
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-      });
-    });
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-    });
-  </script>
-</body>
-</html>
+.hero-slideshow img, .video-bg-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* OVERLAY CONTENT */
+.overlay-content h1 {
+  color: #F2B950;
+  font-size: 3rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.overlay-content p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.btn {
+  padding: 12px 30px;
+  background-color: #1A1A1A;
+  color: #F2B950;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #F2B950;
+  color: #1A1A1A;
+}
+
+/* SECTIONS */
+section {
+  padding: 70px 20px;
+}
+
+.overview, .info-page, .contact {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* INFO CARDS */
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+}
+
+.info-card, .owner-card {
+  background: #fffefc;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.info-card ul {
+  list-style: inside disc;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+/* GALLERY */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.gallery-container img,
+.gallery-container iframe {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover,
+.gallery-container iframe:hover {
+  transform: scale(1.05);
+}
+
+/* LIGHTBOX */
+#lightbox {
+  background: rgba(0,0,0,0.95);
+}
+
+/* FOOTER */
+footer {
+  background: #1A1A1A;
+  color: #F2B950;
+  text-align: center;
+  padding: 35px 0;
+  font-size: 0.95rem;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+  font-size: 1.6rem;
+  color: #1A1A1A;
+  margin: 0 12px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #F2B950;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+  }
+
+  .overlay-content h1 {
+    font-size: 2rem;
+  }
+
+  .overlay-content p {
+    font-size: 1rem;
+  }
+
+  .gallery-container img,
+  .gallery-container iframe {
+    width: 95%;
+  }
+}
