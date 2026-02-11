@@ -333,3 +333,53 @@ footer {
     width: 95%;
   }
 }
+/* ===== PREMIUM FEEL BOOST ===== */
+
+/* Glass luxury header */
+header {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.85);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Gold accent glow on hover */
+.navbar a:hover {
+  background: linear-gradient(135deg,#F2B950,#e0a83a);
+  box-shadow: 0 6px 18px rgba(242,185,80,0.35);
+}
+
+/* Section depth */
+section {
+  position: relative;
+}
+
+section::after {
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:60%;
+  height:1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+  transform: translateX(-50%);
+}
+
+/* Card premium hover */
+.info-card, .owner-card {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.info-card:hover, .owner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+}
+
+/* Button luxury glow */
+.btn {
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+.btn:hover {
+  box-shadow: 0 12px 30px rgba(242,185,80,0.45);
+}
+
