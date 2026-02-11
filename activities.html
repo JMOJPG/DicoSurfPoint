@@ -1,147 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Activities – Dico Surf Point</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activities – Dico Surf Point</title>
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
 
 <header>
-  <a href="index.html" class="logo-link">
-    <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
-  </a>
 
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="rooms.html">Rooms</a>
-    <a href="activities.html">Activities</a>
-    <a href="info.html">Info</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<a href="index.html" class="logo-link">
+<img src="DSL.png.png" class="logo">
+</a>
+
+<div class="navbar-toggle" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="rooms.html">Rooms</a>
+<a href="activities.html">Activities</a>
+<a href="info.html">Info</a>
+<a href="contact.html">Contact</a>
+</nav>
+
 </header>
 
-<!-- ================= HERO VIDEO ================= -->
-<section class="video-bg-container">
-  <iframe
-    class="bg-video"
-    src="https://www.youtube.com/embed/ndE8An3wkJ4?autoplay=1&mute=1&loop=1&playlist=ndE8An3wkJ4&controls=0&modestbranding=1"
-    frameborder="0"
-    allow="autoplay; fullscreen"
-    allowfullscreen>
-  </iframe>
+<!-- HERO IMAGE (Luxury instead of video) -->
+<section class="lux-hero">
 
-  <div class="overlay-content">
-    <h1>Things to Do</h1>
-    <p class="hero-subtitle">
-      Surf, explore, slow down, repeat.
-    </p>
-  </div>
+<div class="lux-overlay">
+<h1>Island Activities</h1>
+<p>Surf. Explore. Disconnect. Repeat.</p>
+</div>
+
 </section>
 
-<!-- ================= TEXT CONTENT ================= -->
+<!-- TEXT -->
 <section class="overview">
-  <h2>Life on Simeulue</h2>
-  <p>
-    From uncrowded reef breaks to slow scooter rides through the village,
-    Simeulue offers more than just world-class waves. Guests can enjoy guided
-    surf sessions, fishing trips, snorkeling crystal-clear reefs, coastal
-    exploring, sunset missions, and cultural experiences guided by locals who
-    know the island inside out.
-    <br><br>
-    Whether you’re here to chase swell or simply disconnect and reset, Dico Surf
-    Point offers a laid-back base to experience the island at your own pace.
-  </p>
+<h2>Life on Simeulue</h2>
+
+<p>
+From uncrowded reef breaks to slow scooter rides through the village,
+Simeulue offers more than just world-class waves.
+<br><br>
+Guests can enjoy guided surf sessions, fishing trips, snorkeling crystal-clear reefs,
+coastal exploring, sunset missions, and authentic local cultural experiences.
+<br><br>
+Whether you're chasing swell or resetting from the world, Dico Surf Point is your base.
+</p>
+
 </section>
 
-<!-- ================= GALLERY ================= -->
+<!-- GALLERY -->
 <section class="gallery">
-  <h2>Activities Gallery</h2>
 
-  <div class="gallery-container">
+<h2>Activities Gallery</h2>
 
-    <!-- IMAGES -->
-    <img src="14.JPG" alt="Surfing Simeulue" onclick="openLightbox(this.src)">
-    <img src="23.JPG" alt="Reef break" onclick="openLightbox(this.src)">
-    <img src="24.JPG" alt="Island exploring" onclick="openLightbox(this.src)">
-    <img src="5.JPG" alt="Ocean view" onclick="openLightbox(this.src)">
+<div class="gallery-container">
 
-    <!-- VIDEOS -->
-    <div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/lIMYur6yd_4')">
-      <iframe src="https://www.youtube.com/embed/lIMYur6yd_4" allowfullscreen></iframe>
-    </div>
+<img src="14.JPG" onclick="openLightbox(this.src)">
+<img src="23.JPG" onclick="openLightbox(this.src)">
+<img src="24.JPG" onclick="openLightbox(this.src)">
+<img src="5.JPG" onclick="openLightbox(this.src)">
 
-    <div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/wcGcolNKXbM')">
-      <iframe src="https://www.youtube.com/embed/wcGcolNKXbM" allowfullscreen></iframe>
-    </div>
+<div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/lIMYur6yd_4')">
+<iframe src="https://www.youtube.com/embed/lIMYur6yd_4"></iframe>
+</div>
 
-    <div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/qOeO8WqzzUA')">
-      <iframe src="https://www.youtube.com/embed/qOeO8WqzzUA" allowfullscreen></iframe>
-    </div>
+<div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/wcGcolNKXbM')">
+<iframe src="https://www.youtube.com/embed/wcGcolNKXbM"></iframe>
+</div>
 
-    <div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/y3xXFZfATFE')">
-      <iframe src="https://www.youtube.com/embed/y3xXFZfATFE" allowfullscreen></iframe>
-    </div>
+</div>
 
-    <div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/Z2Hx9m3RH30')">
-      <iframe src="https://www.youtube.com/embed/Z2Hx9m3RH30" allowfullscreen></iframe>
-    </div>
+<a href="contact.html" class="btn">Book Your Stay</a>
 
-    <div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/XzsqfJU24Hc')">
-      <iframe src="https://www.youtube.com/embed/XzsqfJU24Hc" allowfullscreen></iframe>
-    </div>
-
-  </div>
-
-  <a href="contact.html" class="btn">Contact Us to Book</a>
 </section>
 
 <footer>
-  <p>&copy; 2025 Dico Surf Point • Simeulue, Indonesia</p>
+<p>© 2025 Dico Surf Point • Simeulue, Indonesia</p>
 </footer>
 
-<!-- ================= LIGHTBOX ================= -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-  <iframe id="lightbox-video" frameborder="0" allowfullscreen></iframe>
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
+<iframe id="lightbox-video"></iframe>
 </div>
 
 <script>
-function openLightbox(src) {
-  const lightbox = document.getElementById("lightbox");
-  const img = document.getElementById("lightbox-img");
-  const video = document.getElementById("lightbox-video");
 
-  video.style.display = "none";
-  img.style.display = "block";
-  img.src = src;
-
-  lightbox.style.display = "flex";
+/* MOBILE MENU */
+function toggleMenu(){
+document.querySelector(".navbar").classList.toggle("active");
 }
 
-function openVideo(src) {
-  const lightbox = document.getElementById("lightbox");
-  const img = document.getElementById("lightbox-img");
-  const video = document.getElementById("lightbox-video");
+/* LIGHTBOX IMAGE */
+function openLightbox(src){
+let lightbox = document.getElementById("lightbox");
+let img = document.getElementById("lightbox-img");
+let video = document.getElementById("lightbox-video");
 
-  img.style.display = "none";
-  video.style.display = "block";
-  video.src = src + "?autoplay=1";
+video.style.display="none";
+img.style.display="block";
+img.src = src;
 
-  lightbox.style.display = "flex";
+lightbox.style.display="flex";
 }
 
-function closeLightbox() {
-  const lightbox = document.getElementById("lightbox");
-  const video = document.getElementById("lightbox-video");
+/* LIGHTBOX VIDEO */
+function openVideo(src){
+let lightbox = document.getElementById("lightbox");
+let img = document.getElementById("lightbox-img");
+let video = document.getElementById("lightbox-video");
 
-  video.src = "";
-  lightbox.style.display = "none";
+img.style.display="none";
+video.style.display="block";
+video.src = src + "?autoplay=1";
+
+lightbox.style.display="flex";
 }
+
+function closeLightbox(){
+let lightbox = document.getElementById("lightbox");
+let video = document.getElementById("lightbox-video");
+
+video.src="";
+lightbox.style.display="none";
+}
+
 </script>
 
 </body>
