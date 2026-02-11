@@ -383,3 +383,37 @@ section::after {
   box-shadow: 0 12px 30px rgba(242,185,80,0.45);
 }
 
+/* LUX HERO IMAGE */
+
+.lux-hero{
+height:80vh;
+background:url("14.JPG") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.lux-hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.65));
+}
+
+.lux-overlay{
+position:relative;
+color:white;
+text-align:center;
+}
+
+.lux-overlay h1{
+font-size:3rem;
+letter-spacing:2px;
+margin-bottom:15px;
+}
+
+.lux-overlay p{
+font-size:1.2rem;
+opacity:.9;
+}
