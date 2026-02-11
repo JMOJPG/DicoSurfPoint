@@ -417,3 +417,120 @@ margin-bottom:15px;
 font-size:1.2rem;
 opacity:.9;
 }
+
+/* ===== ULTRA PREMIUM COLOUR SYSTEM ===== */
+
+:root{
+--lux-gold:#F2B950;
+--lux-gold-dark:#d4a037;
+--lux-cream:#fff8f0;
+--lux-black:#121212;
+}
+
+/* Background richness */
+body{
+background:
+radial-gradient(circle at 20% 20%, rgba(242,185,80,0.08), transparent 40%),
+radial-gradient(circle at 80% 80%, rgba(0,0,0,0.05), transparent 40%),
+linear-gradient(160deg,#ffffff,#fff8f0);
+}
+
+/* Premium text rendering */
+body{
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+/* Gold selection highlight */
+::selection{
+background: var(--lux-gold);
+color:white;
+}
+
+/* Subtle luxury noise overlay */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+opacity:0.03;
+pointer-events:none;
+z-index:9999;
+}
+
+.navbar a{
+position:relative;
+overflow:hidden;
+}
+
+.navbar a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0%;
+height:2px;
+background:linear-gradient(90deg,var(--lux-gold),transparent);
+transition:.4s;
+}
+
+.navbar a:hover::after{
+width:100%;
+}
+
+.overlay-content h1{
+font-size: clamp(2.2rem, 5vw, 3.4rem);
+letter-spacing:2px;
+}
+
+.overlay-content{
+animation: heroFade 1.6s ease forwards;
+opacity:0;
+transform: translate(-50%, -40%);
+}
+
+@keyframes heroFade{
+to{
+opacity:1;
+transform: translate(-50%, -50%);
+}
+}
+
+@media (max-width:768px){
+
+header{
+padding:10px 0;
+}
+
+.logo{
+height:42px;
+}
+
+.navbar{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+border-radius:0 0 20px 20px;
+padding:20px 0;
+}
+
+}
+
+.info-card::before,
+.owner-card::before{
+content:"";
+position:absolute;
+inset:0;
+border-radius:inherit;
+background:linear-gradient(120deg,transparent,rgba(242,185,80,.15),transparent);
+opacity:0;
+transition:.5s;
+}
+
+.info-card:hover::before,
+.owner-card:hover::before{
+opacity:1;
+}
