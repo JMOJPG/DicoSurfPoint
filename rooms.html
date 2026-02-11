@@ -84,8 +84,19 @@
   <footer>
     <p>&copy; 2025 Dico Surf Point</p>
   </footer>
-</body>
+
+<script>
+const toggle = document.querySelector(".navbar-toggle");
+const nav = document.querySelector(".navbar");
+
+if(toggle){
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
+</script></body>
 </html>
+
 
 
 
