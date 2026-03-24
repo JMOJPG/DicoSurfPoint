@@ -7,38 +7,46 @@
   <meta name="description" content="シメルエのリモートサーフロッジ、Dico Surf Point。手付かずの波、美しい部屋、食事、スクーター付きの宿泊施設をご提供します。">
 
   <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="jp-style.css">
+  <link rel="stylesheet" href="jp-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
     <a href="index-jp.html" class="logo-link">
       <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
     </a>
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="lang-switch">
+      <a href="index.html">EN</a> | <a href="index-jp.html" class="active">JP</a>
+    </div>
+
+    <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav class="navbar">
       <a href="index-jp.html">ホーム</a>
       <a href="rooms-jp.html">客室</a>
       <a href="activities-jp.html">アクティビティ</a>
       <a href="info-jp.html">情報</a>
-      <a href="contact-jp.html">お問い合わせ</a>
+      <a href="contact-jp.html" class="nav-cta">お問い合わせ</a>
     </nav>
   </header>
 
-  <!-- HERO SLIDESHOW -->
-  <div class="hero-slideshow">
-    <div class="slides active"><img src="1.JPG" alt="シメルエの景色"></div>
-    <div class="slides"><img src="2.JPG" alt="サーフィン"></div>
-    <div class="slides"><img src="3.JPG" alt="島の自然"></div>
-
-    <div class="overlay-content">
+  <!-- HERO -->
+  <section class="lux-hero">
+    <div class="lux-overlay">
       <h1>ディコサーフポイント</h1>
-      <p class="hero-subtitle">忠実な仲間の精神を受け継ぎ、トロピカルな楽園でサーフ＆リセット</p>
-      <p>シメルエ島で非日常体験を</p>
-      <a href="contact-jp.html" class="btn">予約する</a>
+      <p>忠実な仲間の精神を受け継ぎ、トロピカルな楽園でサーフ＆リセット</p>
     </div>
-  </div>
+  </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- OVERVIEW -->
   <section class="overview">
     <h2>Dico Surf Pointについて</h2>
     <p>
@@ -48,24 +56,79 @@
     </p>
   </section>
 
-  <!-- GALLERY -->
-  <section class="gallery">
-    <h2>ギャラリー</h2>
-    <p>シメルエ島の美しい風景をご覧ください</p>
-    <div class="gallery-container">
-      <img src="FAM.jpg" alt="家族" class="gallery-img">
-      <img src="14.JPG" alt="サーフィン" class="gallery-img">
-      <img src="13.JPG" alt="島の景色" class="gallery-img">
-      <img src="15.JPG" alt="海" class="gallery-img">
+  <!-- ROOMS PREVIEW -->
+  <section class="overview">
+    <h2>客室</h2>
+
+    <!-- ROOM 1 -->
+    <div class="room-block">
+      <h3>2–4名用ルーム</h3>
+      <p>
+        サーファーやカップル、小グループ向け。長いサーフセッションの後にリラックスできる空間。
+        清潔で快適、必要なものだけが揃ったナチュラルなデザイン。
+      </p>
+      <p>
+        海の空気で目覚め、波チェック、次のセッションへそのまま直行。
+      </p>
     </div>
-    <p>Instagramもチェック！</p>
-    <div class="social-icons">
-      <a href="https://instagram.com/Dico_Surf_lodge" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
+
+    <!-- ROOM 2 -->
+    <div class="room-block">
+      <h3>4–6名用ルーム</h3>
+      <p>
+        グループでのサーフトリップ向け。広々とした社交的な空間で、長いサーフセッション後も快適。
+      </p>
+      <p>
+        ストーリーを共有したり、次の波を計画したり。島での滞在を存分に楽しめるベース。
+      </p>
     </div>
   </section>
 
+  <!-- WHAT’S INCLUDED -->
+  <section class="included">
+    <h2>含まれる内容</h2>
+    <ul class="includes-list">
+      <li>✔ 空港送迎</li>
+      <li>✔ 1日3食</li>
+      <li>✔ 島内探索用スクーター</li>
+      <li>✔ サーフガイド（希望者のみ）</li>
+      <li>✔ プライベートルーム（2–6名まで）</li>
+    </ul>
+    <p class="note">季節によって提供内容が変わる場合があります。</p>
+    <a href="contact-jp.html" class="btn">予約する</a>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <h2>客室・リビングスペース</h2>
+    <p>島でのリラックスした生活をお楽しみください。</p>
+
+    <div class="gallery-container">
+      <img src="17.JPG" class="gallery-img" alt="Room 1">
+      <img src="18.JPG" class="gallery-img" alt="Room 2">
+      <img src="19.JPG" class="gallery-img" alt="Room 3">
+      <img src="20.JPG" class="gallery-img" alt="Room 4">
+      <img src="21.JPG" class="gallery-img" alt="Room 5">
+      <img src="22.JPG" class="gallery-img" alt="Room 6">
+      <img src="30.JPG" class="gallery-img" alt="Room 7">
+      <img src="31.JPG" class="gallery-img" alt="Room 8">
+      <img src="32.JPG" class="gallery-img" alt="Room 9">
+      <img src="33.JPG" class="gallery-img" alt="Room 10">
+      <img src="34.JPG" class="gallery-img" alt="Room 11">
+      <img src="35.JPG" class="gallery-img" alt="Room 12">
+      <img src="36.JPG" class="gallery-img" alt="Room 13">
+      <img src="37.JPG" class="gallery-img" alt="Room 14">
+      <img src="38.JPG" class="gallery-img" alt="Room 15">
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>滞在の準備はできましたか？</h2>
+    <a href="contact-jp.html" class="btn">予約する</a>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Dico Surf Point • シメルエ島, インドネシア</p>
   </footer>
@@ -75,21 +138,13 @@
     <img id="lightbox-img">
   </div>
 
+  <!-- SCRIPT -->
   <script>
-    // HERO SLIDESHOW
-    document.addEventListener("DOMContentLoaded", () => {
-      let currentSlide = 0;
-      const slides = document.querySelectorAll(".slides");
-      function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove("active"));
-        slides[index].classList.add("active");
-      }
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-      showSlide(0);
-      setInterval(nextSlide, 3500);
+    // MOBILE MENU
+    const toggle = document.querySelector(".navbar-toggle");
+    const nav = document.querySelector(".navbar");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
     });
 
     // GALLERY LIGHTBOX
@@ -107,6 +162,14 @@
     lightbox.addEventListener("click", () => {
       lightbox.style.display = "none";
     });
+
+    // OPTIONAL: AUTO REDIRECT JAPANESE USERS (if needed)
+    if(!window.location.href.includes('-jp')) {
+      const userLang = navigator.language || navigator.userLanguage;
+      if(userLang.startsWith('ja')) {
+        window.location.href = 'index-jp.html';
+      }
+    }
   </script>
 </body>
 </html>
