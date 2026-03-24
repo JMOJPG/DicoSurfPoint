@@ -4,150 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Activities – Dico Surf Point</title>
-
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
+<header class="header">
+  <a href="index.html" class="logo-link">
+    <img src="DSL.png.png" class="logo" alt="Dico Surf Point Logo">
+  </a>
 
-<a href="index.html" class="logo-link">
-<img src="DSL.png.png" class="logo">
-</a>
+  <div class="navbar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-<div class="navbar-toggle" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-<nav class="navbar">
-<a href="index.html">Home</a>
-<a href="rooms.html">Rooms</a>
-<a href="activities.html">Activities</a>
-<a href="info.html">Info</a>
-<a href="contact.html">Contact</a>
-</nav>
-
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="activities.html" class="nav-cta">Activities</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<!-- HERO IMAGE (Luxury instead of video) -->
-<section class="lux-hero">
-
-<div class="lux-overlay">
-<h1>Island Activities</h1>
-<p>Surf. Explore. Disconnect. Repeat.</p>
-</div>
-
+<!-- HERO IMAGE -->
+<section class="page-hero activities-hero">
+  <div class="hero-overlay">
+    <h1>Island Activities</h1>
+    <p>Surf. Explore. Disconnect. Repeat.</p>
+  </div>
 </section>
 
-<!-- TEXT -->
+<!-- OVERVIEW -->
 <section class="overview">
-<h2>Life on Simeulue</h2>
-
-<p>
-From uncrowded reef breaks to slow scooter rides through the village,
-Simeulue offers more than just world-class waves.
-<br><br>
-Guests can enjoy guided surf sessions, fishing trips, snorkeling crystal-clear reefs,
-coastal exploring, sunset missions, and authentic local cultural experiences.
-<br><br>
-Whether you're chasing swell or resetting from the world, Dico Surf Point is your base.
-</p>
-
+  <h2>Life on Simeulue</h2>
+  <p>
+    From uncrowded reef breaks to scooter rides through quiet villages, Simeulue offers more than just world-class waves.
+    <br><br>
+    Guests can enjoy guided surf sessions, fishing trips, snorkeling pristine reefs, coastal exploration, sunset adventures, and authentic cultural experiences.
+    <br><br>
+    Whether chasing swell or taking time to reset, Dico Surf Point is your base for island life.
+  </p>
 </section>
 
-<!-- GALLERY -->
+<!-- ACTIVITIES GALLERY -->
 <section class="gallery">
+  <h2>Gallery</h2>
+  <p>Moments from your stay – surf, sun, and island life.</p>
 
-<h2>Activities Gallery</h2>
+  <div class="gallery-container">
 
-<div class="gallery-container">
+    <!-- IMAGES -->
+    <img src="14.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="23.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="24.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="5.JPG" class="gallery-img" onclick="openLightbox(this.src)">
 
-<img src="14.JPG" onclick="openLightbox(this.src)">
-<img src="23.JPG" onclick="openLightbox(this.src)">
-<img src="24.JPG" onclick="openLightbox(this.src)">
-<img src="5.JPG" onclick="openLightbox(this.src)">
+    <!-- VIDEOS -->
+    <div class="gallery-video">
+      <iframe src="https://www.youtube.com/embed/lIMYur6yd_4" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-<div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/lIMYur6yd_4')">
-<iframe src="https://www.youtube.com/embed/lIMYur6yd_4"></iframe>
-</div>
+    <div class="gallery-video">
+      <iframe src="https://www.youtube.com/embed/wcGcolNKXbM" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-<div class="gallery-video" onclick="openVideo('https://www.youtube.com/embed/wcGcolNKXbM')">
-<iframe src="https://www.youtube.com/embed/wcGcolNKXbM"></iframe>
-</div>
+  </div>
 
-</div>
-
-<a href="contact.html" class="btn">Book Your Stay</a>
-
+  <a href="contact.html" class="btn">Book Your Stay</a>
 </section>
-
-<footer>
-<p>© 2025 Dico Surf Point • Simeulue, Indonesia</p>
-</footer>
 
 <!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
-<img id="lightbox-img">
-<iframe id="lightbox-video"></iframe>
+  <img id="lightbox-img">
+  <iframe id="lightbox-video"></iframe>
 </div>
 
-<script>
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Dico Surf Point • Simeulue, Indonesia</p>
+</footer>
 
+<!-- SCRIPTS -->
+<script>
 /* MOBILE MENU */
-function toggleMenu(){
-document.querySelector(".navbar").classList.toggle("active");
-}
+const toggle = document.querySelector(".navbar-toggle");
+const nav = document.querySelector(".navbar");
+toggle.addEventListener("click", () => { nav.classList.toggle("active"); });
 
 /* LIGHTBOX IMAGE */
 function openLightbox(src){
-let lightbox = document.getElementById("lightbox");
-let img = document.getElementById("lightbox-img");
-let video = document.getElementById("lightbox-video");
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  const video = document.getElementById("lightbox-video");
 
-video.style.display="none";
-img.style.display="block";
-img.src = src;
+  video.style.display="none";
+  img.style.display="block";
+  img.src = src;
 
-lightbox.style.display="flex";
+  lightbox.style.display="flex";
 }
 
 /* LIGHTBOX VIDEO */
 function openVideo(src){
-let lightbox = document.getElementById("lightbox");
-let img = document.getElementById("lightbox-img");
-let video = document.getElementById("lightbox-video");
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  const video = document.getElementById("lightbox-video");
 
-img.style.display="none";
-video.style.display="block";
-video.src = src + "?autoplay=1";
+  img.style.display="none";
+  video.style.display="block";
+  video.src = src + "?autoplay=1";
 
-lightbox.style.display="flex";
+  lightbox.style.display="flex";
 }
 
 function closeLightbox(){
-let lightbox = document.getElementById("lightbox");
-let video = document.getElementById("lightbox-video");
-
-video.src="";
-lightbox.style.display="none";
-}
-
-</script>
-<script>
-const toggle = document.querySelector(".navbar-toggle");
-const nav = document.querySelector(".navbar");
-
-if(toggle){
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
+  const lightbox = document.getElementById("lightbox");
+  const video = document.getElementById("lightbox-video");
+  video.src="";
+  lightbox.style.display="none";
 }
 </script>
+
 </body>
 </html>
-
