@@ -6,59 +6,95 @@
   <title>Contact - Dico Surf Point</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
-<body>
-  <header>
-    <a href="index.html" class="logo-link">
-  <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
-</a>
-        <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="rooms.html">Rooms</a>
-      <a href="activities.html">Activities</a>
-           <a href="info.html">Info</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
- <section class="contact">
-  <h2>Contact Us</h2>
-  <h2>Robi-Bahasa, english</h2>
-  <h2>Naoto-English,Japanese</h2>
-  <p>Reach out to us anytime via Instagram, WhatsApp, or Email!</p>
-  <div class="social-icons">
-    <a href="https://instagram.com/dicosurfpoint" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://wa.me/0403946823" target="_blank" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="mailto:dicosurfpoint@gmail.com" aria-label="Email">
-      <i class="fas fa-envelope"></i>
-    </a>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <a href="index.html" class="logo-link">
+    <img src="DSL.png.png" alt="Dico Surf Point Logo" class="logo" />
+  </a>
+
+  <div class="navbar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="activities.html">Activities</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html" class="nav-cta">Plan Your Trip</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <h1>Get in Touch</h1>
+  <p>We’re here to answer questions or help plan your stay in Simeulue.</p>
 </section>
 
+<!-- CONTACT METHODS -->
+<section class="contact">
+  <div class="contact-container">
 
-  <footer>
-    <p>&copy; 2025 Dico Surf Point</p>
-  </footer>
+    <div class="contact-card">
+      <h2>Robi – Bahasa & English</h2>
+      <p>Reach Robi for local info, bookings, or general questions.</p>
+      <div class="contact-icons">
+        <a href="https://wa.me/0403946823" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://instagram.com/dicosurfpoint" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h2>Naoto – English & Japanese</h2>
+      <p>Contact Naoto for surf guidance, board shaping, or questions about the lodge.</p>
+      <div class="contact-icons">
+        <a href="mailto:dicosurfpoint@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://instagram.com/dicosurfpoint" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional general message -->
+  <p class="contact-note">
+    Feel free to reach out anytime. We usually respond within 24 hours!
+  </p>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to plan your trip?</h2>
+  <a href="contact.html" class="btn">Message Us Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Dico Surf Point • Simeulue, Indonesia</p>
+</footer>
+
+<!-- SCRIPT -->
 <script>
 const toggle = document.querySelector(".navbar-toggle");
 const nav = document.querySelector(".navbar");
 
-if(toggle){
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-}
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
 </script>
 
 </body>
-  
 </html>
-
-
-
-
