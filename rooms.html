@@ -6,97 +6,117 @@
   <title>Rooms - Dico Surf Point</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <a href="index.html" class="logo-link">
-  <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
-</a>
-        <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="rooms.html">Rooms</a>
-      <a href="activities.html">Activities</a>
-<a href="info.html">Info</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <section class="overview">
+<!-- HEADER -->
+<header class="header">
+  <a href="index.html" class="logo-link">
+    <img src="DSL.png.png" alt="Dico Surf Point Logo" class="logo" />
+  </a>
+
+  <div class="navbar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="activities.html">Activities</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html" class="nav-cta">Plan Your Trip</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <h1>Stay at Dico</h1>
+  <p>Simple, comfortable living built around surf.</p>
+</section>
+
+<!-- ROOM OPTIONS -->
+<section class="overview">
   <h2>Our Rooms</h2>
-  <h2 class="rooms-subtitle">2-4 person Room</h2>
-  <p>
-    Perfect for friends, couples or small families, our 2-4 person room offer a relaxed and comfortable base after a full day of travelling or surfing. each room features comfortable beds, aircon, plenty of space to unwind and store your gear while also having enough room to recharge for your next session. Wake up to ocean views and fresh air, this room is designed for comfort whilst being made from local materials.
-  </p>
 
-  <section class="pricing">
-  <h2>Room Pricing</h2>
-
-  <div class="price-card">
-    <h3>Inquire Now!</h3>
-
-
-    <ul class="price-includes">
-      <li>✔ Airport pickup & drop-off</li>
-      <li>✔ 3 meals per day included</li>
-      <li>✔ Scooter rental included</li>
-      <li>✔ Optional surf guide (guest choice)</li>
-      <li>✔ Comfortable private room (2–4 guests)</li>
-    </ul>
-
-    <p class="price-note">
-      *Rates may vary during peak season and public holidays.
+  <!-- ROOM 1 -->
+  <div class="room-block">
+    <h3>2–4 Person Room</h3>
+    <p>
+      Designed for surfers, couples, and small groups, this room offers a relaxed space to reset after long days in the water.
+      Clean, comfortable, and naturally built — everything you need, nothing you don’t.
     </p>
+    <p>
+      Wake up to ocean air, check the surf, and step straight into your next session.
+    </p>
+  </div>
 
-    <a href="contact.html" class="btn">Enquire & Book</a>
+  <!-- ROOM 2 -->
+  <div class="room-block">
+    <h3>4–6 Person Room</h3>
+    <p>
+      Built for groups chasing waves together, our larger room is perfect for surf trips with friends.
+      Spacious, social, and designed for comfort after long sessions.
+    </p>
+    <p>
+      Share stories, plan your next surf, and experience the island together — this is the ultimate base for a proper trip.
+    </p>
   </div>
 </section>
 
-  
- <section class="gallery">
-  <h2>Room Gallery</h2>
-  <p>Comfortable island living with ocean air and natural light.</p>
+<!-- WHAT’S INCLUDED -->
+<section class="included">
+  <h2>What’s Included</h2>
+
+  <ul class="includes-list">
+    <li>✔ Airport pickup & drop-off</li>
+    <li>✔ 3 meals daily</li>
+    <li>✔ Scooter for exploring the island</li>
+    <li>✔ Optional surf guide</li>
+    <li>✔ Private room options (2–6 guests)</li>
+  </ul>
+
+  <p class="note">Availability and details may vary depending on season.</p>
+
+  <a href="contact.html" class="btn">Plan Your Trip</a>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <h2>Room & Living Spaces</h2>
+  <p>Laid-back island living with space to unwind.</p>
 
   <div class="gallery-container">
-
-    <!-- Room Photo -->
-    <img src="17.JPG" alt="Twin room interior">
-
-    <img src="18.JPG" alt="Natural light room view">
-
-    <img src="19.JPG" alt="Shared lounge area">
-    <img src="20.JPG" alt="Shared lounge area">
-    <img src="21.JPG" alt="Shared lounge area">
-    <img src="22.JPG" alt="Shared lounge area">
-
-
-
-
-
-
+    <img src="17.JPG" class="gallery-img">
+    <img src="18.JPG" class="gallery-img">
+    <img src="19.JPG" class="gallery-img">
+    <img src="20.JPG" class="gallery-img">
+    <img src="21.JPG" class="gallery-img">
+    <img src="22.JPG" class="gallery-img">
   </div>
 </section>
 
-  
-  <!-- Optional booking button -->
-  <a href="contact.html" class="btn" style="margin-top: 30px; display: inline-block;">Book Your Stay</a>
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to stay with us?</h2>
+  <a href="contact.html" class="btn">Plan Your Trip</a>
 </section>
 
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Dico Surf Point • Simeulue, Indonesia</p>
+</footer>
 
-  <footer>
-    <p>&copy; 2025 Dico Surf Point</p>
-  </footer>
-
+<!-- SCRIPT -->
 <script>
 const toggle = document.querySelector(".navbar-toggle");
 const nav = document.querySelector(".navbar");
 
-if(toggle){
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-}
-</script></body>
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+</script>
+
+</body>
 </html>
-
-
-
-
