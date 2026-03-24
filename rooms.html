@@ -88,14 +88,27 @@
   <p>Laid-back island living with space to unwind.</p>
 
   <div class="gallery-container">
-    <img src="17.JPG" class="gallery-img">
-    <img src="18.JPG" class="gallery-img">
-    <img src="19.JPG" class="gallery-img">
-    <img src="20.JPG" class="gallery-img">
-    <img src="21.JPG" class="gallery-img">
-    <img src="22.JPG" class="gallery-img">
+    <img src="17.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="18.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="19.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="20.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="21.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="22.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <!-- NEW IMAGES -->
+    <img src="30.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="31.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="32.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="33.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="36.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="37.JPG" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="38.JPG" class="gallery-img" onclick="openLightbox(this.src)">
   </div>
 </section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
 
 <!-- CTA -->
 <section class="cta">
@@ -116,6 +129,21 @@ const nav = document.querySelector(".navbar");
 toggle.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
+
+// LIGHTBOX
+function openLightbox(src){
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  img.src = src;
+  lightbox.style.display = "flex";
+}
+
+function closeLightbox(){
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  img.src = "";
+  lightbox.style.display = "none";
+}
 </script>
 
 </body>
