@@ -3,30 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>客室 - Dico Surf Point</title>
+  <title>客室 – Dico Surf Point</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="jp-style.css" />
   <meta name="description" content="シムルエ島のサーフィンロッジ、Dico Surf Pointの客室をご紹介。快適で自然に囲まれた滞在をお楽しみください。">
   <meta name="keywords" content="シムルエ, ロッジ, 客室, 宿泊, サーフィン, インドネシア">
-  <link rel="alternate" hreflang="ja" href="rooms-jp.html" />
-  <link rel="alternate" hreflang="en" href="rooms.html" />
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <a href="index-jp.html" class="logo-link">
       <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
     </a>
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="lang-switch">
+      <a href="rooms.html">EN</a> | <a href="rooms-jp.html" class="active">JP</a>
+    </div>
+
+    <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav class="navbar">
       <a href="index-jp.html">ホーム</a>
-      <a href="rooms-jp.html">客室</a>
+      <a href="rooms-jp.html" class="nav-cta">客室</a>
       <a href="activities-jp.html">アクティビティ</a>
       <a href="info-jp.html">情報</a>
       <a href="contact-jp.html">お問い合わせ</a>
     </nav>
   </header>
 
+  <!-- ROOMS OVERVIEW -->
   <section class="overview">
     <h2>客室のご案内</h2>
-    <h2 class="rooms-subtitle">2〜4名様用の客室</h2>
+    <h3 class="rooms-subtitle">2〜4名様用の客室</h3>
     <p>
       友人同士、カップル、小さなご家族に最適な2〜4名様用の客室は、
       旅行やサーフィンで疲れた後にゆったりとくつろげる快適な空間です。
@@ -35,6 +48,7 @@
       海の景色と新鮮な空気で目覚める贅沢なひとときをお楽しみください。
     </p>
 
+    <!-- PRICING -->
     <section class="pricing">
       <h2>客室料金</h2>
       <div class="price-card">
@@ -47,13 +61,12 @@
           <li>✔ オプションでサーフガイド可</li>
           <li>✔ 快適なプライベートルーム（2〜4名様）</li>
         </ul>
-        <p class="price-note">
-          *料金はピークシーズンや祝日により変動する場合があります。
-        </p>
+        <p class="price-note">*料金はピークシーズンや祝日により変動する場合があります。</p>
         <a href="contact-jp.html" class="btn">お問い合わせ・予約</a>
       </div>
     </section>
 
+    <!-- GALLERY -->
     <section class="gallery">
       <h2>客室ギャラリー</h2>
       <p>島の自然光と海風を感じられる快適な客室。</p>
@@ -68,11 +81,13 @@
       </div>
     </section>
 
-    <a href="contact-jp.html" class="btn" style="margin-top: 30px; display: inline-block;">ご予約はこちら</a>
+    <!-- CTA -->
+    <a href="contact-jp.html" class="btn cta-btn" style="margin-top: 30px; display: inline-block;">ご予約はこちら</a>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Dico Surf Point • シムルエ, インドネシア</p>
+    <p>&copy; 2025 Dico Surf Point • シムルエ島, インドネシア</p>
   </footer>
 
   <!-- LIGHTBOX -->
@@ -80,7 +95,15 @@
     <img id="lightbox-img">
   </div>
 
+  <!-- SCRIPTS -->
   <script>
+    // MOBILE MENU TOGGLE
+    const toggle = document.querySelector(".navbar-toggle");
+    const nav = document.querySelector(".navbar");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
     // GALLERY LIGHTBOX
     const images = document.querySelectorAll(".gallery-img");
     const lightbox = document.getElementById("lightbox");
@@ -96,6 +119,14 @@
     lightbox.addEventListener("click", () => {
       lightbox.style.display = "none";
     });
+
+    // OPTIONAL: REDIRECT JAPANESE USERS
+    if(!window.location.href.includes('-jp')) {
+      const userLang = navigator.language || navigator.userLanguage;
+      if(userLang.startsWith('ja')) {
+        window.location.href = 'rooms-jp.html';
+      }
+    }
   </script>
 </body>
 </html>
