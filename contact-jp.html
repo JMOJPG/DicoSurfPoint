@@ -5,35 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>お問い合わせ – Dico Surf Point</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="jp-style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="シムルエ島のDico Surf Pointへのお問い合わせはこちら。Instagram、WhatsApp、メールでお気軽にご連絡ください。">
-  <meta name="keywords" content="シムルエ, ロッジ, お問い合わせ, サーフィン, インドネシア, 予約">
-  <link rel="alternate" hreflang="ja" href="contact-jp.html" />
-  <link rel="alternate" hreflang="en" href="contact.html" />
+  <meta name="description" content="シメルエ島のDico Surf Pointへのお問い合わせはこちら。Instagram、WhatsApp、Facebook、メールでお気軽にご連絡ください。">
+  <meta name="keywords" content="シメルエ, ロッジ, お問い合わせ, サーフィン, インドネシア, 予約">
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <a href="index-jp.html" class="logo-link">
       <img src="DSL.png.png" alt="Dico Surf Lodge Logo" class="logo" />
     </a>
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="lang-switch">
+      <a href="contact.html">EN</a> | <a href="contact-jp.html" class="active">JP</a>
+    </div>
+
+    <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav class="navbar">
       <a href="index-jp.html">ホーム</a>
       <a href="rooms-jp.html">客室</a>
       <a href="activities-jp.html">アクティビティ</a>
       <a href="info-jp.html">情報</a>
-      <a href="contact-jp.html">お問い合わせ</a>
+      <a href="contact-jp.html" class="nav-cta">お問い合わせ</a>
     </nav>
   </header>
 
+  <!-- CONTACT SECTION -->
   <section class="contact">
     <h2>お問い合わせ</h2>
-    <p>Instagram、WhatsApp、またはメールでお気軽にご連絡ください！</p>
+    <p>Instagram、WhatsApp、Facebook、またはメールでお気軽にご連絡ください！</p>
     <div class="social-icons">
       <a href="https://instagram.com/dicosurfpoint" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
       <a href="https://wa.me/0403946823" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.facebook.com/share/17xea29cLf/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
       </a>
       <a href="mailto:dicosurfpoint@gmail.com" aria-label="Email">
         <i class="fas fa-envelope"></i>
@@ -43,8 +59,33 @@
     <p style="margin-top:20px;">担当者: Robi (英語・インドネシア語), Naoto (英語・日本語)</p>
   </section>
 
+  <!-- CTA -->
+  <section class="cta">
+    <h2>ご予約・お問い合わせはこちら</h2>
+    <a href="contact-jp.html" class="btn">お問い合わせする</a>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Dico Surf Point • シムルエ, インドネシア</p>
+    <p>&copy; 2025 Dico Surf Point • シメルエ島, インドネシア</p>
   </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // MOBILE MENU TOGGLE
+    const toggle = document.querySelector(".navbar-toggle");
+    const nav = document.querySelector(".navbar");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    // OPTIONAL: REDIRECT JAPANESE USERS AUTOMATICALLY
+    if(!window.location.href.includes('-jp')) {
+      const userLang = navigator.language || navigator.userLanguage;
+      if(userLang.startsWith('ja')) {
+        window.location.href = 'contact-jp.html';
+      }
+    }
+  </script>
 </body>
 </html>
