@@ -188,7 +188,7 @@ toggle.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
-// SLIDESHOW
+// SLIDESHOW (FIXED + PREMIUM TIMING)
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slides");
 
@@ -197,10 +197,16 @@ function showSlide(index) {
   slides[index].classList.add("active");
 }
 
-setInterval(() => {
+function nextSlide() {
   currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
-}, 4000);
+}
+
+// initial
+showSlide(currentSlide);
+
+// slower + cinematic
+setInterval(nextSlide, 6500);
 
 // LIGHTBOX
 const images = document.querySelectorAll(".gallery-grid img");
