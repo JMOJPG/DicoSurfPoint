@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Contact - Dico Surf Point</title>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -27,64 +29,101 @@
     <a href="rooms.html">Rooms</a>
     <a href="activities.html">Activities</a>
     <a href="info.html">Info</a>
-    <a href="contact.html" class="nav-cta">Plan Your Trip</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="page-hero">
-  <h1>Get in Touch</h1>
-  <p>We’re here to answer questions or help plan your stay in Simeulue.</p>
+<section class="page-hero contact-hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Get in Touch</h1>
+      <p>Plan your surf trip to Simeulue</p>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT METHODS -->
+<!-- INTRO -->
+<section class="overview">
+  <h2>We’re Here to Help</h2>
+  <p>
+    Whether you’re booking your first trip or coming back for more waves, reach out and we’ll help you plan everything from transfers to surf conditions.
+  </p>
+</section>
+
+<!-- CONTACT GRID -->
 <section class="contact">
+
   <div class="contact-container">
 
+    <!-- ROBI -->
     <div class="contact-card">
-      <h2>Robi – Bahasa & English</h2>
-      <p>Reach Robi for local info, bookings, or general questions.</p>
+      <h2>Robi</h2>
+      <p>Local support • Bahasa & English • Bookings & travel help</p>
+
       <div class="contact-icons">
-        <a href="https://wa.me/0403946823" target="_blank" aria-label="WhatsApp">
+        <a href="https://wa.me/0403946823" target="_blank">
           <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
-        <a href="https://instagram.com/dicosurfpoint" target="_blank" aria-label="Instagram">
+
+        <a href="https://instagram.com/dicosurfpoint" target="_blank">
           <i class="fab fa-instagram"></i> Instagram
         </a>
-        <a href="https://www.facebook.com/share/17xea29cLf/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i> Facebook
+
+        <a href="https://www.facebook.com/share/17xea29cLf/?mibextid=wwXIfr" target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
         </a>
       </div>
     </div>
 
+    <!-- NAOTO -->
     <div class="contact-card">
-      <h2>Naoto – English & Japanese</h2>
-      <p>Contact Naoto for surf guidance, board shaping, or questions about the lodge.</p>
+      <h2>Naoto</h2>
+      <p>Surf guidance • English & Japanese • Lodge inquiries</p>
+
       <div class="contact-icons">
-        <a href="mailto:dicosurfpoint@gmail.com" aria-label="Email">
+        <a href="mailto:dicosurfpoint@gmail.com">
           <i class="fas fa-envelope"></i> Email
         </a>
-        <a href="https://instagram.com/dicosurfpoint" target="_blank" aria-label="Instagram">
+
+        <a href="https://instagram.com/dicosurfpoint" target="_blank">
           <i class="fab fa-instagram"></i> Instagram
         </a>
-        <a href="https://www.facebook.com/share/17xea29cLf/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i> Facebook
+
+        <a href="https://www.facebook.com/share/17xea29cLf/?mibextid=wwXIfr" target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
         </a>
       </div>
     </div>
 
   </div>
 
-  <!-- Optional general message -->
-  <p class="contact-note">
-    Feel free to reach out anytime. We usually respond within 24 hours!
-  </p>
+</section>
+
+<!-- QUICK INFO STRIP -->
+<section class="contact-info-strip">
+
+  <div class="info-box">
+    <h3>Response Time</h3>
+    <p>Usually within 24 hours</p>
+  </div>
+
+  <div class="info-box">
+    <h3>Location</h3>
+    <p>Simeulue Island, Indonesia</p>
+  </div>
+
+  <div class="info-box">
+    <h3>Best Contact</h3>
+    <p>WhatsApp for fastest reply</p>
+  </div>
+
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Ready to plan your trip?</h2>
-  <a href="contact.html" class="btn">Message Us Now</a>
+  <h2>Ready to surf empty waves?</h2>
+  <a href="https://wa.me/0403946823" class="btn primary">Message on WhatsApp</a>
 </section>
 
 <!-- FOOTER -->
@@ -92,7 +131,6 @@
   <p>&copy; 2025 Dico Surf Point • Simeulue, Indonesia</p>
 </footer>
 
-<!-- SCRIPT -->
 <script>
 const toggle = document.querySelector(".navbar-toggle");
 const nav = document.querySelector(".navbar");
