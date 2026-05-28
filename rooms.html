@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Rooms - Dico Surf Point</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -33,87 +35,90 @@
 <!-- HERO -->
 <section class="page-hero">
   <h1>Stay at Dico</h1>
-  <p>Simple, comfortable living built around surf.</p>
+  <p>Simple island living built around surf, rest, and connection.</p>
 </section>
 
-<!-- ROOM OPTIONS -->
+<!-- INTRO -->
 <section class="overview">
   <h2>Our Rooms</h2>
+  <p>
+    Comfortable, minimal spaces designed for surfers. Nothing unnecessary — just a clean place to rest, recover, and get back in the water.
+  </p>
+</section>
 
-  <!-- ROOM 1 -->
-  <div class="room-block">
-    <h3>2–4 Person Room</h3>
-    <p>
-      Designed for surfers, couples, and small groups, this room offers a relaxed space to reset after long days in the water.
-      Clean, comfortable, and naturally built — everything you need, nothing you don’t.
-    </p>
-    <p>
-      Wake up to ocean air, check the surf, and step straight into your next session.
-    </p>
+<!-- ROOM 1 -->
+<section class="room-block">
+
+  <h2>2–4 Person Room</h2>
+
+  <div class="room-gallery">
+    <img src="39.jpg" loading="lazy">
+    <img src="40.jpg" loading="lazy">
+    <img src="41.jpg" loading="lazy">
   </div>
 
-  <!-- ROOM 2 -->
-  <div class="room-block">
-    <h3>4–6 Person Room</h3>
-    <p>
-      Built for groups chasing waves together, our larger room is perfect for surf trips with friends.
-      Spacious, social, and designed for comfort after long sessions.
-    </p>
-    <p>
-      Share stories, plan your next surf, and experience the island together — this is the ultimate base for a proper trip.
-    </p>
+  <p>
+    A relaxed space ideal for couples or small surf groups. Wake up close to the ocean, check the waves, and step straight into your session.
+  </p>
+
+</section>
+
+<!-- ROOM 2 -->
+<section class="room-block">
+
+  <h2>4–6 Person Room</h2>
+
+  <div class="room-gallery">
+    <img src="42.jpg" loading="lazy">
+    <img src="43.jpg" loading="lazy">
+    <img src="44.jpg" loading="lazy">
   </div>
+
+  <p>
+    Designed for surf trips with friends. Spacious, social, and built for recovery after long days in the water.
+  </p>
+
+</section>
+
+<!-- LIFESTYLE GALLERY -->
+<section class="gallery">
+
+  <h2>Life at the Lodge</h2>
+  <p>Simple island living between surf sessions.</p>
+
+  <div class="gallery-grid">
+
+    <img src="45.jpg" loading="lazy" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="46.jpg" loading="lazy" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="47.jpg" loading="lazy" class="gallery-img" onclick="openLightbox(this.src)">
+
+  </div>
+
 </section>
 
 <!-- WHAT’S INCLUDED -->
 <section class="included">
+
   <h2>What’s Included</h2>
 
   <ul class="includes-list">
     <li>✔ Airport pickup & drop-off</li>
     <li>✔ 3 meals daily</li>
-    <li>✔ Scooter for exploring the island</li>
-    <li>✔ Optional surf guide</li>
-    <li>✔ Private room options (2–6 guests)</li>
+    <li>✔ Scooter for island transport</li>
+    <li>✔ Surf guidance (optional)</li>
+    <li>✔ Linen & basic amenities</li>
   </ul>
 
-  <p class="note">Availability and details may vary depending on season.</p>
+  <p class="note">
+    Packages may vary depending on season and availability.
+  </p>
 
-  <a href="contact.html" class="btn">Plan Your Trip</a>
 </section>
-
-<!-- GALLERY -->
-<section class="gallery">
-  <h2>Room & Living Spaces</h2>
-  <p>Laid-back island living with space to unwind.</p>
-
-  <div class="gallery-container">
-    <img src="17.JPG" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="18.JPG" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="19.JPG" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="20.JPG" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="21.JPG" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="22.JPG" class="gallery-img" onclick="openLightbox(this.src)">
-    <!-- NEW IMAGES -->
-    <img src="30.jpg" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="31.jpg" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="32.JPG" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="33.JPG" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="36.jpg" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="37.jpg" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="38.jpg" class="gallery-img" onclick="openLightbox(this.src)">
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
 
 <!-- CTA -->
 <section class="cta">
   <h2>Ready to stay with us?</h2>
-  <a href="contact.html" class="btn">Plan Your Trip</a>
+  <a href="contact.html" class="btn primary">Plan Your Trip</a>
 </section>
 
 <!-- FOOTER -->
@@ -121,8 +126,14 @@
   <p>&copy; 2025 Dico Surf Point • Simeulue, Indonesia</p>
 </footer>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
 <!-- SCRIPT -->
 <script>
+
 const toggle = document.querySelector(".navbar-toggle");
 const nav = document.querySelector(".navbar");
 
@@ -134,6 +145,7 @@ toggle.addEventListener("click", () => {
 function openLightbox(src){
   const lightbox = document.getElementById("lightbox");
   const img = document.getElementById("lightbox-img");
+
   img.src = src;
   lightbox.style.display = "flex";
 }
@@ -141,9 +153,11 @@ function openLightbox(src){
 function closeLightbox(){
   const lightbox = document.getElementById("lightbox");
   const img = document.getElementById("lightbox-img");
+
   img.src = "";
   lightbox.style.display = "none";
 }
+
 </script>
 
 </body>
