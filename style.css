@@ -1,5 +1,5 @@
 /* ====================================
-   GLOBAL RESET & PREMIUM SYSTEM
+   GLOBAL RESET & PREMIUM SYSTEM (UPGRADED)
 ==================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap');
@@ -11,23 +11,23 @@
 }
 
 :root {
-  --gold: #F2B950;
-  --gold-dark: #c99a3a;
-  --text: #1a1a1a;
-  --muted: #666;
-  --bg: #fbf7f2;
+  --gold: #d6a84a;
+  --gold-soft: #e6c98a;
+  --text: #141414;
+  --muted: #6f6f6f;
+  --bg: #f7f4ef;
   --card: #ffffff;
-  --shadow: rgba(0,0,0,0.12);
+  --shadow: rgba(0,0,0,0.08);
+  --shadow-strong: rgba(0,0,0,0.14);
 }
 
 html, body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.75;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  text-align: center;
   overflow-x: hidden;
 }
 
@@ -37,18 +37,19 @@ body::before {
   position:fixed;
   inset:0;
   background:url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity:0.04;
+  opacity:0.03;
   pointer-events:none;
   z-index:9999;
 }
 
 /* ====================================
-   TYPOGRAPHY
+   TYPOGRAPHY (MORE PREMIUM TONE)
 ==================================== */
 
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  color: var(--text);
 }
 
 h1 {
@@ -56,8 +57,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.1rem;
+  margin-bottom: 22px;
 }
 
 p {
@@ -66,70 +67,29 @@ p {
 }
 
 /* ====================================
-   HEADER
+   HEADER (SOFTER + CLEANER)
 ==================================== */
 
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 12px 0;
-  box-shadow: 0 6px 20px var(--shadow);
+  box-shadow: 0 6px 18px var(--shadow);
   z-index: 1000;
 }
 
-.logo-link {
-  position: absolute;
-  left: 20px;
-}
-
-.logo {
-  height: 50px;
-  transition: 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-}
-
-.navbar {
-  display: flex;
-  gap: 28px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 10px 14px;
-  border-radius: 8px;
-  transition: 0.25s ease;
-}
-
-.navbar a:hover {
-  background: var(--gold);
-  color: white;
-}
-
-/* mobile */
-.navbar-toggle {
-  display: none;
-  position: absolute;
-  right: 18px;
-}
-
 /* ====================================
-   HERO
+   HERO (MORE CINEMATIC)
 ==================================== */
 
 .hero {
-  height: 80vh;
+  height: 85vh;
   position: relative;
   overflow: hidden;
 }
@@ -138,7 +98,7 @@ header {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: 1.2s ease;
+  transition: 1.6s ease;
 }
 
 .hero-slideshow .slides.active {
@@ -149,25 +109,20 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.05);
+  transition: transform 8s ease;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-shadow: 0 6px 20px rgba(0,0,0,0.5);
+.hero-slideshow .slides.active img {
+  transform: scale(1.12);
 }
 
 /* ====================================
-   SECTIONS
+   SECTIONS (MORE LUXURY SPACING)
 ==================================== */
 
 section {
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 .overview {
@@ -176,26 +131,17 @@ section {
 }
 
 /* ====================================
-   CARDS (LUXURY FEEL FIX)
+   CARDS (SOFTER + MORE EXPENSIVE LOOK)
 ==================================== */
-
-.info-container,
-.contact-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
 
 .info-card,
 .owner-card,
 .contact-card {
   background: var(--card);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease;
+  padding: 34px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px var(--shadow);
+  transition: all 0.3s ease;
   text-align: left;
 }
 
@@ -203,34 +149,45 @@ section {
 .owner-card:hover,
 .contact-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 18px 45px var(--shadow-strong);
 }
 
 /* ====================================
-   GALLERY (OPTIMIZED)
+   IMAGE SYSTEM (FIXED + LUXURY FRAMING)
 ==================================== */
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MAIN GALLERY GRID */
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
+  gap: 16px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.gallery-container img,
-.gallery-container iframe {
+/* IMAGE FORMATTING (KEY FIX) */
+.gallery-container img {
   width: 100%;
-  border-radius: 12px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: 0.3s ease;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px var(--shadow);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .gallery-container img:hover {
   transform: scale(1.03);
+  box-shadow: 0 16px 40px var(--shadow-strong);
 }
 
 /* ====================================
-   BUTTONS (LESS FLASHY, MORE EXPENSIVE)
+   BUTTONS (MORE SUBTLE = MORE LUXURY)
 ==================================== */
 
 .btn {
@@ -249,13 +206,13 @@ section {
 }
 
 /* ====================================
-   CTA
+   CTA (LESS HARSH BLACK)
 ==================================== */
 
 .cta {
-  background: linear-gradient(135deg, #111, #222);
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
   color: white;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
 /* ====================================
@@ -264,35 +221,25 @@ section {
 
 footer {
   background: #111;
-  color: var(--gold);
+  color: var(--gold-soft);
   padding: 40px;
 }
 
 /* ====================================
-   MOBILE
+   MOBILE OPTIMISATION
 ==================================== */
 
 @media (max-width: 768px) {
 
-  .navbar {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    padding: 20px;
-  }
-
-  .navbar.active {
-    display: flex;
-  }
-
-  .navbar-toggle {
-    display: block;
+  section {
+    padding: 70px 16px;
   }
 
   .hero {
     height: 60vh;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
   }
 }
