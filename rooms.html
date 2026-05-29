@@ -25,7 +25,7 @@
 
   <nav class="navbar">
     <a href="index.html">Home</a>
-    <a href="rooms.html">Rooms</a>
+    <a href="rooms.html" class="active">Rooms</a>
     <a href="activities.html">Activities</a>
     <a href="info.html">Info</a>
     <a href="contact.html" class="nav-cta">Plan Your Trip</a>
@@ -52,9 +52,9 @@
   <h2>2–4 Person Room</h2>
 
   <div class="room-gallery">
-    <img src="39.jpeg" loading="lazy">
-    <img src="40.JPG" loading="lazy">
-    <img src="41.JPG" loading="lazy">
+
+    <img src="40.JPG" loading="lazy" alt="Room image 40">
+    <img src="41.JPG" loading="lazy" alt="Room image 41">
   </div>
 
   <p>
@@ -69,9 +69,9 @@
   <h2>4–6 Person Room</h2>
 
   <div class="room-gallery">
-    <img src="42.jpeg" loading="lazy">
-    <img src="43.jpeg" loading="lazy">
-    <img src="44.jpeg" loading="lazy">
+ 
+    <img src="43.jpeg" loading="lazy" alt="Room image 43">
+    <img src="44.jpeg" loading="lazy" alt="Room image 44">
   </div>
 
   <p>
@@ -87,7 +87,8 @@
   <p>Simple island living between surf sessions.</p>
 
   <div class="gallery-grid">
-
+    <img src="39.jpeg" loading="lazy" class="gallery-img" onclick="openLightbox(this.src)">
+    <img src="42.jpeg" loading="lazy" class="gallery-img" onclick="openLightbox(this.src)">
     <img src="45.jpg" loading="lazy" class="gallery-img" onclick="openLightbox(this.src)">
     <img src="46.JPG" loading="lazy" class="gallery-img" onclick="openLightbox(this.src)">
     <img src="47.jpg" loading="lazy" class="gallery-img" onclick="openLightbox(this.src)">
@@ -118,7 +119,7 @@
 <!-- CTA -->
 <section class="cta">
   <h2>Ready to stay with us?</h2>
-  <a href="contact.html" class="btn primary">Plan Your Trip</a>
+  <a href="contact.html" class="btn">Plan Your Trip</a>
 </section>
 
 <!-- FOOTER -->
@@ -131,9 +132,7 @@
   <img id="lightbox-img">
 </div>
 
-<!-- SCRIPT -->
 <script>
-
 const toggle = document.querySelector(".navbar-toggle");
 const nav = document.querySelector(".navbar");
 
@@ -141,23 +140,16 @@ toggle.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
-// LIGHTBOX
 function openLightbox(src){
   const lightbox = document.getElementById("lightbox");
   const img = document.getElementById("lightbox-img");
-
   img.src = src;
   lightbox.style.display = "flex";
 }
 
 function closeLightbox(){
-  const lightbox = document.getElementById("lightbox");
-  const img = document.getElementById("lightbox-img");
-
-  img.src = "";
-  lightbox.style.display = "none";
+  document.getElementById("lightbox").style.display = "none";
 }
-
 </script>
 
 </body>
