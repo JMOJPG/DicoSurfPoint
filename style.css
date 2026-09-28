@@ -453,7 +453,7 @@ footer {
 }
 
 .hero-content {
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
   .hero .hero-content h1 {
@@ -468,17 +468,17 @@ footer {
     margin-bottom: 18px;
   }
 
-  .hero .hero-buttons {
-    width: 78%;
-    margin: 0 auto;
-    gap: 8px;
-  }
+ .hero .hero-buttons {
+  width: 68%;
+  margin: 0 auto;
+  gap: 8px;
+}
 
-  .hero .hero-buttons a {
-    width: 100%;
-    padding: 10px 12px;
-    font-size: 15px;
-  }
+.hero .hero-buttons a {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+}
 
   .intro {
     padding-top: 35px;
