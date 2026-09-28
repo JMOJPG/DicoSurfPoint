@@ -545,4 +545,22 @@ footer {
     bottom: 35px;
     transform: none;
   }
+
+}/* ===== DESKTOP PHOTO SIZE FIX ===== */
+@media (min-width: 769px) {
+
+  .room-gallery,
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .room-gallery img,
+  .gallery-grid img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
 }
