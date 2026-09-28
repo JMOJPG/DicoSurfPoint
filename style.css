@@ -615,3 +615,14 @@ footer {
   }
 
 }
+/* ===== HOMEPAGE SPACING FIX ===== */
+@media (min-width: 769px) {
+
+  .rooms-preview,
+  .overview,
+  .gallery {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+}
