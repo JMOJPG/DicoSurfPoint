@@ -525,4 +525,24 @@ footer {
   .intro {
     padding-top: 35px;
   }
+}/* ===== DESKTOP HERO FINAL FIX ===== */
+@media (min-width: 769px) {
+
+  .hero-overlay {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 140px 7% 40px;
+  }
+
+  .hero-content {
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .hero-buttons {
+    position: absolute;
+    left: 7%;
+    bottom: 35px;
+    transform: none;
+  }
 }
