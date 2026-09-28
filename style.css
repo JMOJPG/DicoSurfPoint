@@ -328,7 +328,12 @@ footer {
     height: 48vh;
   }
 
-  .gallery-grid img,
+   .hero-overlay {
+    justify-content: flex-start;
+    padding: 28px 16px 20px;
+}
+   
+   .gallery-grid img,
   .room-gallery img,
   .activity-grid img {
     height: 220px;
