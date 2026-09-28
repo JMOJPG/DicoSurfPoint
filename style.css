@@ -611,7 +611,9 @@ footer {
 }
 .faq {
   padding-top: 20px;
+  padding-bottom: 30px;
 }
+   
 .faq-item {
   margin-bottom: 20px;
 }
