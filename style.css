@@ -174,14 +174,14 @@ header {
   overflow: hidden;
 }
 
-.hero-slideshow .slides {
+.hero-slideshow .slide {
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 1.8s ease;
 }
 
-.hero-slideshow .slides.active {
+.hero-slideshow .slide.active {
   opacity: 1;
 }
 
@@ -193,7 +193,7 @@ header {
   transition: transform 8s ease;
 }
 
-.hero-slideshow .slides.active img {
+.hero-slideshow .slide.active img {
   transform: scale(1.12);
 }
 
