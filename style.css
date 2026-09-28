@@ -603,5 +603,9 @@ footer {
     padding-top: 45px;
     padding-bottom: 45px;
   }
-
-}
+   
+.rooms-preview .btn {
+  display: block;
+  width: fit-content;
+  margin: 25px auto 0;
+}}
