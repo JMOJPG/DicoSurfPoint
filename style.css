@@ -325,9 +325,15 @@ footer {
   }
 
   .hero {
-    height: 520px;
-  }
+    height: 590px;
+    overflow: hidden;
+}
 
+   .hero-slideshow,
+.hero-slideshow .slides {
+    height: 100%;
+}
+   
    .hero-overlay {
     justify-content: flex-start;
     padding: 30px 30px;
