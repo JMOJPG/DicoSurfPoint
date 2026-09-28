@@ -209,6 +209,32 @@ header {
   text-shadow: 0 6px 25px rgba(0,0,0,0.4);
 }
 
+/* DESKTOP HERO LAYOUT */
+@media (min-width: 769px) {
+
+  .hero-overlay {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 110px 7%;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-content p {
+    color: white;
+  }
+
+  .hero-buttons {
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+  }
+}
 /* ====================================
    SECTIONS
 ==================================== */
