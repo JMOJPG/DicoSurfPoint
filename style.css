@@ -325,12 +325,12 @@ footer {
   }
 
   .hero {
-    height: 48vh;
+    height: 52vh;
   }
 
    .hero-overlay {
-    justify-content: flex-start;
-    padding: 28px 16px 20px;
+    justify-content: center;
+    padding: 20px 16px;
 }
    
    .gallery-grid img,
