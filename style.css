@@ -334,6 +334,13 @@ footer {
     height: 220px;
   }
 }
+.gallery-section {
+    padding-bottom: 30px;
+}
+
+.video-section {
+    padding-top: 30px;
+}
 
 /* VIDEO SECTION */
 .video-grid {
