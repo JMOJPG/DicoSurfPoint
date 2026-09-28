@@ -448,9 +448,9 @@ footer {
   }
 
   .hero-overlay {
-    padding: 25px 24px;
-    justify-content: flex-start;
-  }
+  padding: 65px 24px 25px;
+  justify-content: flex-start;
+}
 
   .hero .hero-content h1 {
     font-size: 32px;
