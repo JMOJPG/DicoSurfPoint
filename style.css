@@ -665,10 +665,3 @@ footer {
     height: auto !important;
     padding: 25px 24px !important;
   }
-
-/* FINAL MOBILE CTA HEIGHT */
-@media (max-width: 768px) {
-  section.cta {
-    padding: 45px 24px !important;
-  }
-}
