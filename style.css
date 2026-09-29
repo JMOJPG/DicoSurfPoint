@@ -662,6 +662,6 @@ footer {
   section.cta {
     min-height: 0 !important;
     height: auto !important;
-    padding: 35px 24px !important;
+    padding: 25px 24px !important;
   }
 }
