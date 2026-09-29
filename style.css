@@ -638,3 +638,22 @@ footer {
   max-width: 650px;
   line-height: 1.6;
 }
+@media (max-width: 768px) {
+  .cta {
+    min-height: 0;
+    height: auto;
+    padding: 55px 24px 60px;
+  }
+
+  .cta h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .cta p {
+    color: #d0d0d0;
+    margin-top: 0;
+    margin-bottom: 22px;
+    line-height: 1.5;
+  }
+}
