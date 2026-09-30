@@ -694,4 +694,17 @@ footer {
   touch-action: manipulation;
   cursor: pointer;
 }   
+   
+/* CONTACT HERO OVERLAP TEST */
+.contact-hero {
+    position: relative !important;
+    z-index: 0 !important;
+    overflow: hidden !important;
+}
+
+.contact-grid,
+.contact-card {
+    position: relative !important;
+    z-index: 100 !important;
+}
 }
