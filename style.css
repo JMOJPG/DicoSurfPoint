@@ -773,27 +773,36 @@ footer {
     .contact-intro {
         padding: 35px 16px !important;
     }
-/* ===== INFO PAGE CLEAN FIX ===== */
+   
+   /* ===== INFO PAGE FINAL FIX ===== */
 
 .overview {
-    position: relative !important;
+    position: static !important;
+    transform: none !important;
     margin: 0 !important;
     padding: 50px 20px !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.overview .container {
+    position: static !important;
     transform: none !important;
 }
 
-.overview .container,
 .overview h2,
 .overview p {
     position: static !important;
+    transform: none !important;
     top: auto !important;
     left: auto !important;
-    transform: none !important;
+    right: auto !important;
+    bottom: auto !important;
 }
 
 @media (max-width: 768px) {
     .overview {
-        padding: 90px 20px 35px !important;
+        padding: 35px 20px !important;
     }
 
     .overview h2 {
