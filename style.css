@@ -707,4 +707,18 @@ footer {
     position: relative !important;
     z-index: 100 !important;
 }
+
+   /* CONTACT PAGE OVERLAY FIX */
+.contact-hero .hero-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+.contact-hero {
+    position: relative !important;
+    overflow: hidden !important;
 }
