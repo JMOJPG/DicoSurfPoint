@@ -773,8 +773,27 @@ footer {
     .contact-intro {
         padding: 35px 16px !important;
     }
-   
-/* FIX CONTACT PAGE TOP OVERLAP */
-.contact-intro {
-    margin-top: 72px !important;
+
+   /* ===== FIX INNER PAGE TOP HEADINGS ===== */
+
+body:not(.home) main {
+  padding-top: 72px;
+}
+
+.contact-intro,
+.info-intro,
+.activities-intro {
+  position: relative !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+.contact-intro h1,
+.contact-intro h2,
+.info-intro h1,
+.info-intro h2,
+.activities-intro h1,
+.activities-intro h2 {
+  position: static !important;
+  transform: none !important;
 }
