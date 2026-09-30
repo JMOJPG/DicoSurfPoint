@@ -773,4 +773,9 @@ footer {
     .contact-intro {
         padding: 35px 16px !important;
     }
+   
+/* FIX CONTACT PAGE TOP OVERLAP */
+.contact-hero {
+    margin-top: 72px !important;
+}
 }
