@@ -678,4 +678,20 @@ footer {
     padding: 12px 18px !important;
     margin: 0 !important;
   }
+
+   /* ===== CONTACT LINK CLICK FIX ===== */
+
+.contact-card,
+.contact-links {
+  position: relative;
+  z-index: 20;
+}
+
+.contact-links a {
+  position: relative;
+  z-index: 21;
+  pointer-events: auto !important;
+  touch-action: manipulation;
+  cursor: pointer;
+}   
 }
