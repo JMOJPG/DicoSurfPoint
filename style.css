@@ -775,7 +775,6 @@ footer {
     }
    
 /* FIX CONTACT PAGE TOP OVERLAP */
-.contact-hero {
+.contact-intro {
     margin-top: 72px !important;
-}
 }
