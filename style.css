@@ -801,12 +801,7 @@ body:not(.home) main {
 /* ===== FINAL INNER PAGE HERO FIX ===== */
 
 .page-hero {
-  position: relative !important;
-  height: auto !important;
-  min-height: 0 !important;
-  margin-top: 72px !important;
-  padding: 60px 20px !important;
-  overflow: visible !important;
+    display: none !important;
 }
 
 .page-hero .hero-content {
