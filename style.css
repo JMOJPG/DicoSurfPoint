@@ -652,10 +652,11 @@ footer {
     line-height: 1.5;
   }
    
-/* FINAL MOBILE CTA FIX */
+/* MOBILE CTA HEIGHT FIX */
 @media (max-width: 768px) {
-  section.cta {
+  .cta {
     min-height: 0 !important;
     height: auto !important;
-    padding: 25px 24px !important;
+    padding: 35px 24px !important;
   }
+}
