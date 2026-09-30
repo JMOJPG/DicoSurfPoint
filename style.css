@@ -737,4 +737,40 @@ footer {
     .contact-links {
         gap: 12px 16px;
     }
+
+/* ===== CONTACT PAGE TOP FIX ===== */
+
+.contact-intro {
+    display: block !important;
+    padding: 60px 20px !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.contact-intro .container {
+    display: block !important;
+}
+
+.contact-intro h2 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    color: #111 !important;
+    margin: 0 0 18px !important;
+    padding: 0 !important;
+}
+
+.contact-intro p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .contact-intro {
+        padding: 35px 16px !important;
+    }
 }
