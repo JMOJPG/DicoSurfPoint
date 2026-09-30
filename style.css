@@ -652,24 +652,30 @@ footer {
     line-height: 1.5;
   }
    
-/* FINAL MOBILE CTA */
+/* FINAL COMPACT MOBILE CTA */
 @media (max-width: 768px) {
   section.cta {
-    height: auto !important;
     min-height: 0 !important;
-    padding: 28px 24px !important;
+    height: auto !important;
+    padding: 24px 20px !important;
     margin: 0 !important;
   }
 
   section.cta h2 {
-    margin: 0 0 12px !important;
+    font-size: 26px !important;
+    line-height: 1.15 !important;
+    margin: 0 0 10px !important;
   }
 
   section.cta p {
-    margin: 0 0 18px !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    margin: 0 0 16px !important;
   }
 
   section.cta .btn {
+    font-size: 15px !important;
+    padding: 12px 18px !important;
     margin: 0 !important;
   }
 }
