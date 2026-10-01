@@ -678,105 +678,108 @@ footer {
     padding: 12px 18px !important;
     margin: 0 !important;
   }
+}
 
 /* ===== CONTACT PAGE ===== */
 
 .contact {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .contact-card {
-    position: relative;
-    padding: 34px;
+  position: relative;
+  padding: 34px;
 }
 
 .contact-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px 18px;
-    margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 18px;
 }
 
 .contact-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    position: relative;
-    z-index: 2;
-    line-height: 1.4;
-    white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 .contact-hero {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-hero .hero-overlay {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 
-    .contact-card {
-        padding: 28px 22px;
-    }
+  .contact-card {
+    padding: 28px 22px;
+  }
 
-    .contact-links {
-        gap: 12px 16px;
-    }
+  .contact-links {
+    gap: 12px 16px;
+  }
+}
 
 /* ===== CONTACT PAGE TOP FIX ===== */
 
 .contact-intro {
-    display: block !important;
-    padding: 60px 20px !important;
-    min-height: 0 !important;
-    height: auto !important;
+  display: block !important;
+  padding: 60px 20px !important;
+  min-height: 0 !important;
+  height: auto !important;
 }
 
 .contact-intro .container {
-    display: block !important;
+  display: block !important;
 }
 
 .contact-intro h2 {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: static !important;
-    color: #111 !important;
-    margin: 0 0 18px !important;
-    padding: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: static !important;
+  color: #111 !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
 }
 
 .contact-intro p {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: static !important;
-    margin: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: static !important;
+  margin: 0 !important;
 }
 
 @media (max-width: 768px) {
-    .contact-intro {
-        padding: 35px 16px !important;
-    }
-   
-/* ===== INFO CARDS MOBILE ONLY ===== */
-@media (max-width: 768px) {
+  .contact-intro {
+    padding: 35px 16px !important;
+  }
+}
 
+/* ===== INFO CARDS MOBILE FINAL ===== */
+
+@media (max-width: 768px) {
   .info-card {
     padding: 22px 20px !important;
   }
