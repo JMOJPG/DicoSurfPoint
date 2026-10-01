@@ -773,30 +773,36 @@ footer {
     .contact-intro {
         padding: 35px 16px !important;
     }
+   
 /* ===== INFO CARDS MOBILE ONLY ===== */
 @media (max-width: 768px) {
 
   .info-card {
-    padding: 24px 22px !important;
+    padding: 22px 20px !important;
   }
 
   .info-card h2 {
-    font-size: 26px !important;
+    font-size: 22px !important;
     line-height: 1.2 !important;
-    margin-bottom: 16px !important;
+    margin: 0 0 12px !important;
   }
 
   .info-card p,
   .info-card li {
-    font-size: 17px !important;
-    line-height: 1.55 !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
   }
 
   .info-card p {
-    margin-bottom: 8px !important;
+    margin: 0 0 7px !important;
   }
 
   .info-card p:last-child {
     margin-bottom: 0 !important;
+  }
+
+  .info-card ul {
+    margin: 0 !important;
+    padding-left: 20px !important;
   }
 }
