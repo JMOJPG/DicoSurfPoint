@@ -773,47 +773,4 @@ footer {
     .contact-intro {
         padding: 35px 16px !important;
     }
-   
-   /* ===== INFO PAGE FINAL FIX ===== */
-
-.overview {
-    position: static !important;
-    transform: none !important;
-    margin: 0 !important;
-    padding: 50px 20px !important;
-    min-height: 0 !important;
-    height: auto !important;
-}
-
-.overview .container {
-    position: static !important;
-    transform: none !important;
-}
-
-.overview h2,
-.overview p {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-}
-
-@media (max-width: 768px) {
-    .overview {
-        padding: 35px 20px !important;
-    }
-
-    .overview h2 {
-        font-size: 30px !important;
-        line-height: 1.15 !important;
-        margin: 0 0 15px !important;
-    }
-
-    .overview p {
-        font-size: 17px !important;
-        line-height: 1.6 !important;
-        margin: 0 !important;
-    }
 }
