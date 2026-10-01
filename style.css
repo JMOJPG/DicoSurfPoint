@@ -773,4 +773,30 @@ footer {
     .contact-intro {
         padding: 35px 16px !important;
     }
+/* ===== INFO CARDS MOBILE ONLY ===== */
+@media (max-width: 768px) {
+
+  .info-card {
+    padding: 24px 22px !important;
+  }
+
+  .info-card h2 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .info-card p,
+  .info-card li {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+
+  .info-card p {
+    margin-bottom: 8px !important;
+  }
+
+  .info-card p:last-child {
+    margin-bottom: 0 !important;
+  }
 }
