@@ -808,24 +808,4 @@ footer {
     margin: 0 !important;
     padding-left: 20px !important;
   }
-   
-/* ===== INFO PAGE DESKTOP GRID ===== */
-@media (min-width: 769px) {
-
-  .info-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .info-card {
-    height: 100%;
-  }
-
-  .info-card:last-child {
-    grid-column: 1 / -1;
-  }
-
 }
