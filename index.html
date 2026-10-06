@@ -39,6 +39,45 @@
   ]
 }
 </script>
+  
+<style>
+.youtube-lite {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.youtube-lite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.youtube-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  border: 0;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.youtube-lite iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
 
 </head>
 
@@ -154,22 +193,25 @@
 
     <h2>Experience Simeulue</h2>
 
-    <div class="video-grid">
-      <iframe
-  src="https://www.youtube.com/embed/x_DtSGkJFww"
-  title="Dico Surf Point Simeulue"
-  loading="lazy"
-  allowfullscreen>
-</iframe>
+  <div class="video-grid">
 
-<iframe
-  src="https://www.youtube.com/embed/SvWYPvncung"
-  title="Dico Surf Point Simeulue Experience"
-  loading="lazy"
-  allowfullscreen>
-</iframe>
-      
-    </div>
+  <div class="youtube-lite" data-video="x_DtSGkJFww">
+    <img
+      src="https://i.ytimg.com/vi/x_DtSGkJFww/hqdefault.jpg"
+      alt="Dico Surf Point Simeulue video"
+      loading="lazy">
+    <button class="youtube-play" aria-label="Play Dico Surf Point Simeulue video">▶</button>
+  </div>
+
+  <div class="youtube-lite" data-video="SvWYPvncung">
+    <img
+      src="https://i.ytimg.com/vi/SvWYPvncung/hqdefault.jpg"
+      alt="Dico Surf Point Simeulue experience video"
+      loading="lazy">
+    <button class="youtube-play" aria-label="Play Dico Surf Point Simeulue experience video">▶</button>
+  </div>
+
+</div>
 
   </div>
 </section>
@@ -242,6 +284,22 @@ function changeSlide() {
 
 setInterval(changeSlide, 6500);
 
+  /* CLICK-TO-LOAD YOUTUBE */
+document.querySelectorAll(".youtube-lite").forEach(video => {
+  video.addEventListener("click", () => {
+    const id = video.dataset.video;
+
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+    iframe.title = "Dico Surf Point YouTube video";
+    iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    video.innerHTML = "";
+    video.appendChild(iframe);
+  }, { once: true });
+});
+  
 </script>
 
 </body>
