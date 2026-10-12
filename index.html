@@ -76,6 +76,397 @@
   height: 100%;
   border: 0;
 }
+
+/* Hero booking enquiry: compact dark tropical green */
+.hero { position: relative; min-height: 690px; }
+.hero .hero-booking-bar {
+  position: absolute; z-index: 12; bottom: -34px; left: 50%;
+  transform: translateX(-50%); width: min(1160px, calc(100% - 40px));
+  box-sizing: border-box; background: rgba(22, 57, 47, .96);
+  color: #fff; border: 1px solid rgba(255,255,255,.22);
+  border-radius: 8px; padding: 13px 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.26);
+}
+.hero-booking-bar .booking-bar-heading { margin: 0 0 12px; color: #fff; font-size: 18px; font-weight: 600; letter-spacing: .02em; }
+.hero-booking-bar .booking-form { display: grid; grid-template-columns: 1fr 1fr .75fr auto; align-items: end; gap: 10px; }
+.hero-booking-bar .booking-field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.hero-booking-bar .booking-field label { color: #e3efe9; font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+.hero-booking-bar .booking-field input, .hero-booking-bar .booking-field select {
+  width: 100%; min-width: 0; box-sizing: border-box; height: 42px;
+  padding: 0 11px; border: 1px solid #b7c7bd; border-radius: 4px;
+  background: #fff; color: #20342c; font: inherit; font-size: 15px;
+}
+.hero-booking-bar .booking-submit {
+  height: 42px; border: 0; border-radius: 4px; padding: 0 19px;
+  background: #e9e2cb; color: #1c3a30; font: inherit; font-size: 13px;
+  font-weight: 750; letter-spacing: .035em; cursor: pointer; white-space: nowrap;
+}
+.hero-booking-bar .booking-submit:hover { background: #fff5d9; }
+.hero-booking-bar .booking-note { margin: 7px 0 0; color: #e3efe9; font-size: 11px; }
+.hero-booking-bar :is(input, select, button):focus-visible { outline: 3px solid #f4d58b; outline-offset: 2px; }
+/* Keep the existing hero headline clear of the new bar */
+.hero .hero-content { padding-bottom: 105px; box-sizing: border-box; }
+@media (max-width: 760px) {
+  .hero { min-height: 690px; }
+  .hero .hero-booking-bar { width: calc(100% - 24px); bottom: -35px; padding: 12px 13px; }
+  .hero-booking-bar .booking-bar-heading { font-size: 16px; margin-bottom: 9px; }
+  .hero-booking-bar .booking-form { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 9px; }
+  .hero-booking-bar .booking-field-guests, .hero-booking-bar .booking-submit { grid-column: 1 / -1; }
+  .hero-booking-bar .booking-field input, .hero-booking-bar .booking-field select { font-size: 16px; height: 43px; }
+  .hero-booking-bar .booking-submit { width: 100%; height: 44px; }
+  .hero-booking-bar .booking-note { font-size: 11px; line-height: 1.4; }
+  .hero .hero-content { padding-bottom: 220px; }
+}
+@media (max-width: 355px) {
+  .hero { min-height: 740px; }
+  .hero-booking-bar .booking-form { grid-template-columns: 1fr; }
+  .hero-booking-bar .booking-field-guests, .hero-booking-bar .booking-submit { grid-column: auto; }
+  .hero .hero-content { padding-bottom: 275px; }
+}
+/* Allow booking bar to overlap the next section without hiding its heading */
+.hero + .intro { padding-top: 58px; }
+@media (max-width: 760px) { .hero + .intro { padding-top: 60px; } }
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <a href="index.html" class="logo-link">
+   <img src="DSL.png.png" class="logo" alt="Dico Surf Point">
+  </a>
+
+  <div class="navbar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="activities.html">Activities</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html" class="nav-cta">Book Now</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-slideshow">
+    <div class="slide active"><img src="1.JPG" alt="Surfing in Simeulue near Dico Surf Point" width="2048" height="1365" fetchpriority="high"></div>
+    <div class="slide"><img src="2.JPG" alt="Simeulue surf and island scenery" width="800" height="533"></div>
+    <div class="slide"><img src="3.JPG" alt="Dico Surf Point surf accommodation in Simeulue" width="800" height="533"></div>
+  </div>
+
+  <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.25));">
+    <div class="hero-content">
+      <h1>Uncrowded Waves.<br>Real Simeulue.</h1>
+      <p>Simeulue Surf Accommodation • Oceanfront Lodge • Indonesia</p>
+
+
+    </div>
+  </div>
+
+<!-- DIRECT BOOKING ENQUIRY — WhatsApp (not live availability) -->
+<section class="hero-booking-bar" id="check-availability" aria-labelledby="booking-heading">
+  <div class="booking-bar-inner">
+    <h2 class="booking-bar-heading" id="booking-heading" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Check availability by WhatsApp</h2>
+    <form class="booking-form" id="booking-enquiry-form">
+      <div class="booking-field">
+        <label for="booking-checkin">CHECK-IN</label>
+        <input type="date" id="booking-checkin" name="checkin" required>
+      </div>
+      <div class="booking-field">
+        <label for="booking-checkout">CHECK-OUT</label>
+        <input type="date" id="booking-checkout" name="checkout" required>
+      </div>
+      <div class="booking-field booking-field-guests">
+        <label for="booking-guests">GUESTS</label>
+        <select id="booking-guests" name="guests" required>
+          <option value="1">1 guest</option>
+          <option value="2" selected>2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+          <option value="5">5 guests</option>
+          <option value="6">6 guests</option>
+          <option value="7">7 guests</option>
+          <option value="8">8 guests</option>
+          <option value="9">9 guests</option>
+          <option value="10">10 guests</option>
+          <option value="11">11 guests</option>
+          <option value="12">12 guests</option>
+        </select>
+      </div>
+      <button class="booking-submit" type="submit">CHECK AVAILABILITY →</button>
+    </form>
+    <p class="booking-note">WhatsApp enquiry only — we’ll confirm availability and pricing personally.</p>
+  </div>
+</section>
+
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <h2>More Than Just a Surf Trip</h2>
+    <p>
+  Stay at our oceanfront surf accommodation in Simeulue, explore different surf breaks around the island, and enjoy genuine local hospitality with Robi, his family and the Dico Surf Point team.
+</p>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms-preview">
+  <div class="container">
+
+    <h2>Stay by the Ocean</h2>
+    <p>Quiet, comfortable accommodation for couples, families and surfers, with warm local hospitality and everything organised for an easy stay.</p>   
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="40.JPG" alt="Ocean view room at Dico Surf Point in Simeulue" width="750" height="1000" style="width:100%; height:240px; object-fit:cover;">
+        <h3>Ocean View Room</h3>
+      </div>
+
+      <div class="room-card">
+        <img src="44.jpeg" alt="Garden bungalow accommodation at Dico Surf Point" width="800" height="600" style="width:100%; height:240px; object-fit:cover;">
+        <h3>Garden Bungalow</h3>
+      </div>
+    </div>
+
+    <a href="rooms.html" class="btn primary">Explore Rooms</a>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="overview">
+  <div class="container">
+    <h2>Stay Local. Surf Simeulue.</h2>
+    <p>
+      Stay with Robi, his family and the Dico Surf Point team, experience genuine local hospitality, and explore different surf breaks around Simeulue.
+    </p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="container">
+
+    <h2>Life at Dico</h2>
+    <p>Surf, island life and everyday moments around Dico Surf Point.</p>
+    
+    <div class="gallery-grid">
+      <img src="7.JPG" alt="Surfing and island life in Simeulue" width="800" height="533">
+      <img src="8.JPG" alt="Ocean scenery near Dico Surf Point" width="800" height="533">
+      <img src="9.JPG" alt="Simeulue island life and local scenery" width="800" height="533">
+      <img src="10.JPG" alt="Surf trip experience in Simeulue" width="800" height="533">
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <div class="container">
+
+    <h2>Experience Simeulue</h2>
+
+  <div class="video-grid">
+
+  <div class="youtube-lite" data-video="x_DtSGkJFww">
+    <img
+      src="https://i.ytimg.com/vi/x_DtSGkJFww/hqdefault.jpg"
+      alt="Dico Surf Point Simeulue video"
+      loading="lazy">
+    <button class="youtube-play" aria-label="Play Dico Surf Point Simeulue video">▶</button>
+  </div>
+
+  <div class="youtube-lite" data-video="SvWYPvncung">
+    <img
+      src="https://i.ytimg.com/vi/SvWYPvncung/hqdefault.jpg"
+      alt="Dico Surf Point Simeulue experience video"
+      loading="lazy">
+    <button class="youtube-play" aria-label="Play Dico Surf Point Simeulue experience video">▶</button>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>How do I get there?</h3>
+      <p>Fly to Medan, then take a domestic flight to Simeulue. Airport pick-up and drop-off in Simeulue are included with your stay.</p>
+    </div>
+
+    <div class="faq-item">
+  <h3>What is included in my stay?</h3>
+  <p>Breakfast, lunch and dinner are included, along with drinking water, coffee and tea, use of a scooter, and one massage per guest during your stay. Dirt bikes are also available for an additional fee.</p>
+</div>
+    
+<div class="faq-item">
+  <h3>Can I rent a surfboard?</h3>
+  <p>Yes. Surfboard rental is available at Dico Surf Point. Please contact us for available boards and prices.</p>
+  
+</div>    
+<div class="faq-item">
+  <h3>Can you help transport my surfboard from Medan?</h3>
+  <p>Yes. We can help arrange surfboard transport by ship from Medan to Simeulue. This can be cheaper than taking your board on the flight. Prices can change, so please contact us for the current cost.</p>
+</div>
+    
+    <div class="faq-item">
+      <h3>When is the best time to surf in Simeulue?</h3>
+      <p>Simeulue offers surf year-round. March to October generally brings bigger and more consistent swell, while the quieter months often offer smaller, cleaner waves, more surf spot options and fewer crowds.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Surf Simeulue?</h2>
+<p>Stay local, surf different breaks and experience Simeulue with the Dico Surf Point team.</p>
+<a href="contact.html" class="btn primary">Plan Your Trip</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Dico Surf Point • Simeulue, Indonesia</p>
+</footer>
+
+<script>
+
+/* NAV */
+const toggle = document.querySelector(".navbar-toggle");
+const nav = document.querySelector(".navbar");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+/* PREMIUM SLIDESHOW (FADE) */
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function changeSlide() {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+
+setInterval(changeSlide, 6500);
+
+  /* CLICK-TO-LOAD YOUTUBE */
+document.querySelectorAll(".youtube-lite").forEach(video => {
+  video.addEventListener("click", () => {
+    const id = video.dataset.video;
+
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+    iframe.title = "Dico Surf Point YouTube video";
+    iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    video.innerHTML = "";
+    video.appendChild(iframe);
+  }, { once: true });
+});
+  
+
+/* DIRECT WHATSAPP ENQUIRY — no paid booking engine required */
+(function () {
+  const form = document.getElementById('booking-enquiry-form');
+  const checkin = document.getElementById('booking-checkin');
+  const checkout = document.getElementById('booking-checkout');
+  const guests = document.getElementById('booking-guests');
+  const today = new Date();
+  const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+    .toISOString().slice(0, 10);
+  checkin.min = localDate;
+  checkout.min = localDate;
+
+  checkin.addEventListener('change', function () {
+    checkout.min = checkin.value || localDate;
+    if (checkout.value && checkout.value <= checkin.value) checkout.value = '';
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    if (checkout.value <= checkin.value) {
+      checkout.setCustomValidity('Check-out must be after check-in.');
+      checkout.reportValidity();
+      return;
+    }
+    checkout.setCustomValidity('');
+    const message = [
+      'Hi Dico Surf Point! I would like to check availability for a stay.',
+      'Check-in: ' + checkin.value,
+      'Check-out: ' + checkout.value,
+      'Guests: ' + guests.value,
+      'Could you please confirm availability and the total price? Thank you!'
+    ].join('\n');
+    window.location.href = 'https://wa.me/61466013700?text=' + encodeURIComponent(message);
+  });
+  checkout.addEventListener('change', function () { checkout.setCustomValidity(''); });
+})();
+
+</script>
+
+</body>
+</html>
+    "https://www.instagram.com/dicosurfpoint/"
+  ]
+}
+</script>
+  
+<style>
+.youtube-lite {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.youtube-lite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.youtube-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  border: 0;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.youtube-lite iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 </style>
 
 </head>
