@@ -751,14 +751,17 @@ document.querySelectorAll(".youtube-lite").forEach(video => {
 
 <script>
 
-/* NAV */
+/* NAV — mobile menu */
 const toggle = document.querySelector(".navbar-toggle");
 const nav = document.querySelector(".navbar");
 
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-
+if (toggle && nav) {
+  toggle.addEventListener("click", function (event) {
+    event.preventDefault();
+    nav.classList.toggle("active");
+  });
+}
+  
 /* PREMIUM SLIDESHOW (FADE) */
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
