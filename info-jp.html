@@ -26,13 +26,13 @@
       <a href="info.html">EN</a> | <a href="info-jp.html" class="active">JP</a>
     </div>
 
-    <div class="navbar-toggle">
+    <button class="navbar-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="jp-navigation">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
 
-    <nav class="navbar">
+    <nav id="jp-navigation" class="navbar" aria-label="メインメニュー">
       <a href="index-jp.html">ホーム</a>
       <a href="rooms-jp.html">客室</a>
       <a href="activities-jp.html">アクティビティ</a>
@@ -109,7 +109,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Dico Surf Point • シメルー島, インドネシア</p>
+    <p>&copy; 2026 Dico Surf Point • シメルー島, インドネシア</p>
   </footer>
 
   <!-- SCRIPT -->
@@ -118,7 +118,8 @@
     const toggle = document.querySelector(".navbar-toggle");
     const nav = document.querySelector(".navbar");
     toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
+      const opened = nav.classList.toggle("active");
+      toggle.setAttribute("aria-expanded", String(opened));
     });
 
     // OPTIONAL: REDIRECT JAPANESE USERS AUTOMATICALLY
@@ -131,3 +132,4 @@
   </script>
 </body>
 </html>
+
