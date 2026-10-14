@@ -14,40 +14,63 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="jp-style.css">
   
+  <style>
+    /* Japanese Rooms page: scoped improvements, no shared CSS changes */
+    .rooms-jp-content { padding-top: 48px; }
+    .rooms-jp-content .overview, .rooms-jp-content .pricing, .rooms-jp-content .gallery { max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .rooms-jp-content h1, .rooms-jp-content h2, .rooms-jp-content h3 { overflow-wrap: anywhere; line-height: 1.35; }
+    .rooms-jp-content p, .rooms-jp-content li { line-height: 1.8; }
+    .rooms-jp-content .room-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin: 24px 0; }
+    .rooms-jp-content .room-photo-grid figure { margin: 0; min-width: 0; }
+    .rooms-jp-content .room-photo-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 12px; display: block; }
+    .rooms-jp-content .room-photo-grid figcaption { font-size: 16px; padding: 9px 0; }
+    .rooms-jp-content .price-includes { padding-left: 0; list-style: none; }
+    .rooms-jp-content .price-includes li { margin-bottom: 9px; }
+    @media (max-width: 760px) {
+      .header { position: relative; z-index: 1000; }
+      .navbar-toggle { position: relative; z-index: 1002; cursor: pointer; margin-left: auto; }
+      .navbar.active { z-index: 1001; }
+      .rooms-jp-content { padding-top: 32px; }
+      .rooms-jp-content .overview { padding: 20px 18px !important; }
+      .rooms-jp-content h1 { font-size: 30px !important; line-height: 1.4 !important; margin: 8px 0 18px !important; }
+      .rooms-jp-content h2 { font-size: 25px !important; line-height: 1.4 !important; margin: 26px 0 15px !important; }
+      .rooms-jp-content h3 { font-size: 21px !important; line-height: 1.4 !important; margin: 18px 0 10px !important; }
+      .rooms-jp-content p, .rooms-jp-content li { font-size: 16px !important; line-height: 1.8 !important; letter-spacing: 0 !important; }
+      .rooms-jp-content .price { font-size: 18px !important; line-height: 1.5 !important; }
+      .rooms-jp-content .pricing, .rooms-jp-content .gallery { padding: 10px 0 !important; }
+      .rooms-jp-content .price-card { padding: 18px 14px !important; }
+      .rooms-jp-content .room-photo-grid { grid-template-columns: 1fr; gap: 18px; }
+      .rooms-jp-content .room-photo-grid img { height: 250px; }
+    }
+    @media (max-width: 390px) {
+      .rooms-jp-content h1 { font-size: 27px !important; }
+      .rooms-jp-content h2 { font-size: 23px !important; }
+      .rooms-jp-content h3 { font-size: 20px !important; }
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <a href="index-jp.html" class="logo-link">
-      <img src="DSL.png.png" alt="Dico Surf Point" class="logo" />
-    </a>
-
-    <!-- LANGUAGE SWITCHER -->
-    <div class="lang-switch">
-      <a href="rooms.html">EN</a> | <a href="rooms-jp.html" class="active">JP</a>
-    </div>
-
-    <div class="navbar-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
+  <!-- HEADER: same navigation structure as Japanese homepage -->
+  <header class="header">
+    <a href="index-jp.html" class="logo-link"><img src="DSL.png.png" alt="Dico Surf Point" class="logo"></a>
+    <div class="navbar-toggle" aria-label="メニュー"><span></span><span></span><span></span></div>
     <nav class="navbar">
       <a href="index-jp.html">ホーム</a>
-      <a href="rooms-jp.html" class="nav-cta">客室</a>
+      <a href="rooms-jp.html">客室</a>
       <a href="activities-jp.html">アクティビティ</a>
-      <a href="info-jp.html">情報</a>
-      <a href="contact-jp.html">お問い合わせ</a>
+      <a href="info-jp.html">ご案内</a>
+      <a href="contact-jp.html" class="nav-cta">お問い合わせ</a>
+      <a href="rooms.html" lang="en">EN 🇦🇺</a>
     </nav>
   </header>
 
+  <main class="rooms-jp-content">
   <!-- ROOMS OVERVIEW -->
   <section class="overview">
     <h1>客室のご案内</h1>
-    <h3 class="rooms-subtitle">2〜4名様用の客室</h3>
+    <h3 class="rooms-subtitle">海辺の快適な客室</h3>
     <p>
-      友人同士、カップル、小さなご家族に最適な2〜4名様用の客室は、
+      友人同士、カップル、小さなご家族にもおすすめの客室は、
       旅行やサーフィンで疲れた後にゆったりとくつろげる快適な空間です。
       各客室には快適なベッド、エアコン、広々とした収納スペースが備わっており、
       次のサーフィンセッションに向けてしっかりと充電できます。
@@ -65,7 +88,7 @@
           <li>✔ 1日3食付き</li>
           <li>✔ スクーターレンタル込み</li>
           <li>✔ オプションでサーフガイド可</li>
-          <li>✔ 快適なプライベートルーム（2〜4名様）</li>
+          <li>✔ 快適な客室</li>
         </ul>
         <p class="price-note">宿泊料金と空室状況はWhatsAppでお気軽にお問い合わせください。</p>
         <a href="contact-jp.html" class="btn">お問い合わせ・予約</a>
@@ -77,40 +100,21 @@
       <h2>客室ギャラリー</h2>
       <p>島の自然光と海風を感じられる快適な客室。</p>
 
-     <div class="gallery-container">
-  <img src="17.JPG" alt="Dico Surf Pointのツインルーム" class="gallery-img">
-<img src="18.JPG" alt="自然光が差し込むDico Surf Pointの客室" class="gallery-img">
-<img src="19.JPG" alt="Dico Surf Pointの共有スペース" class="gallery-img">
-<img src="20.JPG" alt="シメルー島のDico Surf Pointの宿泊施設" class="gallery-img">
-<img src="21.JPG" alt="Dico Surf Pointで過ごすリラックスした島時間" class="gallery-img">
-<img src="22.JPG" alt="シメルー島のDico Surf Pointの客室と施設" class="gallery-img">
-
-<!-- Added photos 30–38 -->
-<img src="30.JPG" alt="Dico Surf Pointの快適な客室" class="gallery-img">
-<img src="31.JPG" alt="シメルー島での滞在を楽しむDico Surf Pointの客室" class="gallery-img">
-<img src="32.JPG" alt="Dico Surf Pointの客室と宿泊スペース" class="gallery-img">
-<img src="33.JPG" alt="Dico Surf Pointのリラックスできる宿泊スペース" class="gallery-img">
-<img src="34.JPG" alt="シメルー島のDico Surf Pointの宿泊環境" class="gallery-img">
-<img src="35.JPG" alt="Dico Surf Pointの客室と島での滞在" class="gallery-img">
-<img src="36.JPG" alt="Dico Surf Pointの快適な宿泊施設" class="gallery-img">
-<img src="37.JPG" alt="シメルー島のDico Surf Pointでの滞在" class="gallery-img">
-<img src="38.JPG" alt="Dico Surf Pointの客室とリラックススペース" class="gallery-img">
-</div>
+      <div class="room-photo-grid">
+        <figure><img src="40.JPG" alt="Dico Surf Pointのオーシャンビュールーム" loading="lazy"><figcaption>オーシャンビュールーム</figcaption></figure>
+        <figure><img src="44.jpeg" alt="Dico Surf Pointのガーデンバンガロー" loading="lazy"><figcaption>ガーデンバンガロー</figcaption></figure>
+      </div>
     </section>
 
     <!-- CTA -->
     <a href="contact-jp.html" class="btn cta-btn" style="margin-top: 30px; display: inline-block;">ご予約はこちら</a>
   </section>
 
+  </main>
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Dico Surf Point • シメルー島, インドネシア</p>
+    <p>&copy; 2026 Dico Surf Point • シメルー島, インドネシア</p>
   </footer>
-
-  <!-- LIGHTBOX -->
-  <div id="lightbox">
-    <img id="lightbox-img">
-  </div>
 
   <!-- SCRIPTS -->
   <script>
@@ -121,30 +125,8 @@
       nav.classList.toggle("active");
     });
 
-    // GALLERY LIGHTBOX
-    const images = document.querySelectorAll(".gallery-img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-
-    images.forEach(img => {
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-      });
-    });
-
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-    });
-
-    // OPTIONAL: REDIRECT JAPANESE USERS
-    if(!window.location.href.includes('-jp')) {
-      const userLang = navigator.language || navigator.userLanguage;
-      if(userLang.startsWith('ja')) {
-        window.location.href = 'rooms-jp.html';
-      }
-    }
   </script>
 </body>
 </html>
+
 
