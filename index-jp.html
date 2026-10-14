@@ -1,180 +1,458 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>シメルー島のサーフロッジ | Dico Surf Point</title>
-
-<meta name="description" content="インドネシア・シメルー島のDico Surf Point。海を楽しみながらゆっくり過ごせる、家族・カップル・初心者にもおすすめのサーフロッジです。">
 
 <link rel="alternate" hreflang="en" href="https://dicosurfpoint.com/">
 <link rel="alternate" hreflang="ja" href="https://dicosurfpoint.com/index-jp.html">
 <link rel="canonical" href="https://dicosurfpoint.com/index-jp.html">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="jp-style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>シメルー島のサーフロッジ・宿泊施設 | Dico Surf Point</title>
+
+<meta name="description" content="インドネシア・シメルー島の海辺にあるDico Surf Point。快適な客室、地元料理、空港送迎、スクーター、周辺のサーフポイントへのアクセスを楽しめるサーフロッジです。">
+
+<link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "@id": "https://dicosurfpoint.com/#lodging",
+  "name": "Dico Surf Point",
+  "url": "https://dicosurfpoint.com/",
+  "description": "Relaxed oceanfront surf accommodation in Simeulue, Indonesia, offering comfortable rooms, local meals, airport pickup, motorbike use and easy access to surf spots.",
+  "image": [
+    "https://dicosurfpoint.com/1.JPG",
+    "https://dicosurfpoint.com/40.JPG",
+    "https://dicosurfpoint.com/44.jpeg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Simeulue",
+    "addressCountry": "ID"
+  },
+  "sameAs": [
+    "https://www.instagram.com/dicosurfpoint/"
+  ]
+}
+</script>
+  
+<style>
+.youtube-lite {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.youtube-lite img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.youtube-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  border: 0;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.youtube-lite iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Hero booking enquiry: compact dark tropical green */
+.hero { position: relative; min-height: 760px; }
+.hero .hero-booking-bar {
+  position: absolute; z-index: 12; bottom: 100px; left: 50%;
+  transform: translateX(-50%); width: min(1160px, calc(100% - 40px));
+  box-sizing: border-box; background: rgba(22, 57, 47, .96);
+  color: #fff; border: 1px solid rgba(255,255,255,.22);
+  border-radius: 8px; padding: 13px 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.26);
+}
+.hero-booking-bar .booking-bar-heading { margin: 0 0 12px; color: #fff; font-size: 18px; font-weight: 600; letter-spacing: .02em; }
+.hero-booking-bar .booking-form { display: grid; grid-template-columns: 1fr 1fr .75fr auto; align-items: end; gap: 10px; }
+.hero-booking-bar .booking-field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.hero-booking-bar .booking-field label { color: #e3efe9; font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+.hero-booking-bar .booking-field input, .hero-booking-bar .booking-field select {
+  width: 100%; min-width: 0; box-sizing: border-box; height: 42px;
+  padding: 0 11px; border: 1px solid #b7c7bd; border-radius: 4px;
+  background: #fff; color: #20342c; font: inherit; font-size: 15px;
+}
+.hero-booking-bar .booking-submit {
+  height: 42px; border: 0; border-radius: 4px; padding: 0 19px;
+  background: #e9e2cb; color: #1c3a30; font: inherit; font-size: 13px;
+  font-weight: 750; letter-spacing: .035em; cursor: pointer; white-space: nowrap;
+}
+.hero-booking-bar .booking-submit:hover { background: #fff5d9; }
+.hero-booking-bar .booking-note { margin: 7px 0 0; color: #e3efe9; font-size: 11px; }
+.hero-booking-bar :is(input, select, button):focus-visible { outline: 3px solid #f4d58b; outline-offset: 2px; }
+/* Make native iPhone date controls legible and properly sized. */
+.hero-booking-bar input[type="date"] { -webkit-appearance: none; appearance: none; min-width: 0; }
+.hero-booking-bar input[type="date"]::-webkit-date-and-time-value { text-align: left; min-height: 1em; }
+.hero-booking-bar input[type="date"]::-webkit-datetime-edit { color: #20342c; }
+/* Keep the existing hero headline clear of the new bar */
+.hero .hero-content { padding-bottom: 105px; box-sizing: border-box; }
+@media (max-width: 760px) {
+  .hero { min-height: 1000px; }
+  .hero .hero-booking-bar { width: calc(100% - 24px); bottom: 38px; padding: 12px 13px; }
+  .hero-booking-bar .booking-bar-heading { font-size: 16px; margin-bottom: 9px; }
+  .hero-booking-bar .booking-form { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 9px; }
+  .hero-booking-bar .booking-field-guests, .hero-booking-bar .booking-submit { grid-column: 1 / -1; }
+  .hero-booking-bar .booking-field input, .hero-booking-bar .booking-field select { font-size: 16px; height: 43px; }
+  .hero-booking-bar .booking-submit { width: 100%; height: 44px; }
+  .hero-booking-bar .booking-note { font-size: 11px; line-height: 1.4; }
+  .hero .hero-content { padding-top: 110px; padding-bottom: 220px; }
+}
+@media (max-width: 355px) {
+  .hero { min-height: 910px; }
+  .hero-booking-bar .booking-form { grid-template-columns: 1fr; }
+  .hero-booking-bar .booking-field-guests, .hero-booking-bar .booking-submit { grid-column: auto; }
+  .hero .hero-content { padding-top: 120px; padding-bottom: 275px; }
+}
+/* The booking bar now stays completely inside the hero. */
+.hero + .intro { padding-top: 35px; }
+@media (max-width: 760px) { .hero + .intro { padding-top: 35px; } }
+
+  /* Mobile navigation fix */
+@media (max-width: 760px) {
+  .header {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .navbar-toggle {
+    position: relative;
+    z-index: 1002;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .navbar.active {
+    z-index: 1001;
+  }
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <a href="index-jp.html" class="logo-link">
-      <img src="DSL.png.png" alt="Dico Surf Point" class="logo" />
-    </a>
+<!-- HEADER -->
+<header class="header">
+  <a href="index-jp.html" class="logo-link">
+   <img src="DSL.png.png" class="logo" alt="Dico Surf Point">
+  </a>
 
-    <!-- LANGUAGE SWITCHER -->
-    <div class="lang-switch">
-      <a href="index.html">EN</a> | <a href="index-jp.html" class="active">JP</a>
-    </div>
-
-    <div class="navbar-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <nav class="navbar">
-      <a href="index-jp.html">ホーム</a>
-      <a href="rooms-jp.html">客室</a>
-      <a href="activities-jp.html">アクティビティ</a>
-      <a href="info-jp.html">情報</a>
-      <a href="contact-jp.html" class="nav-cta">お問い合わせ</a>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section class="lux-hero">
-    <div class="lux-overlay">
-      <h1>ディコサーフポイント</h1>
-      <p>忠実な仲間の精神を受け継ぎ、トロピカルな楽園でサーフ＆リセット</p>
-    </div>
-  </section>
-
-  <!-- OVERVIEW -->
-  <section class="overview">
-    <h2>Dico Surf Pointについて</h2>
-    <p>
-      手つかずの島、シメルー島に位置するDico Surf Pointは単なる宿泊施設ではなく体験です。
-      ロッジのオーナーが飼っていた忠実なグレートデーン犬の名前にちなみ、自由と冒険、仲間意識の精神を宿しています。
-      世界クラスの波を追い求めるサーファーも、ゆったり休みたい方も、私たちのフレンドリーなスタッフが思い出に残る滞在をお手伝いします。
-    </p>
-  </section>
-
-  <!-- ROOMS PREVIEW -->
-  <section class="overview">
-    <h2>客室</h2>
-
-    <!-- ROOM 1 -->
-    <div class="room-block">
-      <h3>2–4名用ルーム</h3>
-      <p>
-        サーファーやカップル、小グループ向け。長いサーフセッションの後にリラックスできる空間。
-        清潔で快適、必要なものだけが揃ったナチュラルなデザイン。
-      </p>
-      <p>
-        海の空気で目覚め、波チェック、次のセッションへそのまま直行。
-      </p>
-    </div>
-
-    <!-- ROOM 2 -->
-    <div class="room-block">
-      <h3>4–6名用ルーム</h3>
-      <p>
-        グループでのサーフトリップ向け。広々とした社交的な空間で、長いサーフセッション後も快適。
-      </p>
-      <p>
-        ストーリーを共有したり、次の波を計画したり。島での滞在を存分に楽しめるベース。
-      </p>
-    </div>
-  </section>
-
-  <!-- WHAT’S INCLUDED -->
-  <section class="included">
-    <h2>含まれる内容</h2>
-    <ul class="includes-list">
-      <li>✔ 空港送迎</li>
-      <li>✔ 1日3食</li>
-      <li>✔ 島内探索用スクーター</li>
-      <li>✔ サーフガイド（希望者のみ）</li>
-      <li>✔ プライベートルーム（2–6名まで）</li>
-    </ul>
-    <p class="note">季節によって提供内容が変わる場合があります。</p>
-    <a href="contact-jp.html" class="btn">予約する</a>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="gallery">
-    <h2>客室・リビングスペース</h2>
-    <p>島でのリラックスした生活をお楽しみください。</p>
-
-    <div class="gallery-container">
-     <img src="17.JPG" class="gallery-img" alt="Dico Surf Pointの客室">
-     <img src="18.JPG" class="gallery-img" alt="自然光が差し込むDico Surf Pointの客室">
-     <img src="19.JPG" class="gallery-img" alt="Dico Surf Pointの共有スペース">
-     <img src="20.JPG" class="gallery-img" alt="シメルー島のDico Surf Pointの宿泊施設">
-     <img src="21.JPG" class="gallery-img" alt="Dico Surf Pointで過ごすリラックスした島時間">
-     <img src="22.JPG" class="gallery-img" alt="Dico Surf Pointの客室と施設">
-     <img src="30.JPG" class="gallery-img" alt="Dico Surf Pointの快適な客室">
-     <img src="31.JPG" class="gallery-img" alt="シメルー島での滞在を楽しむDico Surf Pointの客室">
-     <img src="32.JPG" class="gallery-img" alt="Dico Surf Pointの客室と宿泊スペース">
-     <img src="33.JPG" class="gallery-img" alt="Dico Surf Pointのリラックスできる宿泊スペース">
-     <img src="34.JPG" class="gallery-img" alt="シメルー島のDico Surf Pointの宿泊環境">
-     <img src="35.JPG" class="gallery-img" alt="Dico Surf Pointの客室と島での滞在">
-     <img src="36.JPG" class="gallery-img" alt="Dico Surf Pointの快適な宿泊施設">
-     <img src="37.JPG" class="gallery-img" alt="シメルー島のDico Surf Pointでの滞在">
-     <img src="38.JPG" class="gallery-img" alt="Dico Surf Pointの客室とリラックススペース">
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <h2>滞在の準備はできましたか？</h2>
-    <a href="contact-jp.html" class="btn">予約する</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Dico Surf Point • シメルー島, インドネシア</p>
-  </footer>
-
-  <!-- LIGHTBOX -->
-  <div id="lightbox">
-    <img id="lightbox-img">
+  <div class="navbar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
-  <!-- SCRIPT -->
-  <script>
-    // MOBILE MENU
-    const toggle = document.querySelector(".navbar-toggle");
-    const nav = document.querySelector(".navbar");
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
+  <nav class="navbar">
+    <a href="index-jp.html">ホーム</a>
+    <a href="rooms-jp.html">客室</a>
+    <a href="activities-jp.html">アクティビティ</a>
+    <a href="info-jp.html">ご案内</a>
+    <a href="contact-jp.html" class="nav-cta">お問い合わせ</a>
+    <a href="index.html" lang="en">EN 🇦🇺</a>
+  </nav>
+</header>
 
-    // GALLERY LIGHTBOX
-    const images = document.querySelectorAll(".gallery-img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
+<!-- HERO -->
+<section class="hero">
 
-    images.forEach(img => {
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-      });
-    });
+  <div class="hero-slideshow">
+    <div class="slide active"><img src="1.JPG" alt="Dico Surf Point周辺のシメルー島でのサーフィン" width="2048" height="1365" fetchpriority="high"></div>
+    <div class="slide"><img src="2.JPG" alt="シメルー島の波と島の風景" width="800" height="533"></div>
+    <div class="slide"><img src="3.JPG" alt="シメルー島のサーフロッジ Dico Surf Point" width="800" height="533"></div>
+  </div>
 
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-    });
+  <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.25));">
+    <div class="hero-content">
+      <h1>混雑を離れて、波と過ごす。<br>シメルー島へ。</h1>
+      <p>シメルー島のサーフロッジ • オーシャンフロント • インドネシア</p>
 
-    // OPTIONAL: AUTO REDIRECT JAPANESE USERS (if needed)
-    if(!window.location.href.includes('-jp')) {
-      const userLang = navigator.language || navigator.userLanguage;
-      if(userLang.startsWith('ja')) {
-        window.location.href = 'index-jp.html';
-      }
+
+    </div>
+  </div>
+
+<!-- DIRECT BOOKING ENQUIRY — WhatsApp (not live availability) -->
+<section class="hero-booking-bar" id="check-availability" aria-labelledby="booking-heading">
+  <div class="booking-bar-inner">
+    <h2 class="booking-bar-heading" id="booking-heading" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">WhatsAppで空室を問い合わせる</h2>
+    <form class="booking-form" id="booking-enquiry-form">
+      <div class="booking-field">
+        <label for="booking-checkin">チェックイン</label>
+        <input type="date" id="booking-checkin" name="checkin" required>
+      </div>
+      <div class="booking-field">
+        <label for="booking-checkout">チェックアウト</label>
+        <input type="date" id="booking-checkout" name="checkout" required>
+      </div>
+      <div class="booking-field booking-field-guests">
+        <label for="booking-guests">人数</label>
+        <select id="booking-guests" name="guests" required>
+          <option value="1">1名</option>
+          <option value="2" selected>2名</option>
+          <option value="3">3名</option>
+          <option value="4">4名</option>
+          <option value="5">5名</option>
+          <option value="6">6名</option>
+          <option value="7">7名</option>
+          <option value="8">8名</option>
+          <option value="9">9名</option>
+          <option value="10">10名</option>
+          <option value="11">11名</option>
+          <option value="12">12名</option>
+        </select>
+      </div>
+      <button class="booking-submit" type="submit">空室を問い合わせる →</button>
+    </form>
+    <p class="booking-note">WhatsAppでのお問い合わせです。空室状況と料金を確認してご案内します。</p>
+  </div>
+</section>
+
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <h2>サーフィンだけではない、島での時間</h2>
+    <p>
+  シメルー島の海辺のロッジに滞在し、島内のさまざまなサーフポイントを巡りながら、Robiと家族、Dico Surf Pointチームの温かいおもてなしをお楽しみください。
+</p>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms-preview">
+  <div class="container">
+
+    <h2>海のそばで、ゆったり滞在</h2>
+    <p>カップル、ご家族、サーファーにおすすめの静かで快適な宿泊施設。地元スタッフが滞在をサポートします。</p>   
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="40.JPG" alt="Ocean view room at Dico Surf Point in Simeulue" width="750" height="1000" style="width:100%; height:240px; object-fit:cover;">
+        <h3>オーシャンビュールーム</h3>
+      </div>
+
+      <div class="room-card">
+        <img src="44.jpeg" alt="Garden bungalow accommodation at Dico Surf Point" width="800" height="600" style="width:100%; height:240px; object-fit:cover;">
+        <h3>ガーデンバンガロー</h3>
+      </div>
+    </div>
+
+    <a href="rooms-jp.html" class="btn primary">客室を見る</a>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="overview">
+  <div class="container">
+    <h2>島の暮らしに触れ、シメルー島でサーフィン。</h2>
+    <p>
+      Robiと家族、Dico Surf Pointチームとともに、地元ならではの温かいおもてなしとシメルー島のさまざまな波を体験してください。
+    </p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="container">
+
+    <h2>Dicoで過ごす島時間</h2>
+    <p>サーフィン、島の自然、Dico Surf Pointでの日々の風景。</p>
+    
+    <div class="gallery-grid">
+      <img src="7.JPG" alt="Surfing and island life in Simeulue" width="800" height="533">
+      <img src="8.JPG" alt="Ocean scenery near Dico Surf Point" width="800" height="533">
+      <img src="9.JPG" alt="Simeulue island life and local scenery" width="800" height="533">
+      <img src="10.JPG" alt="Surf trip experience in Simeulue" width="800" height="533">
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <div class="container">
+
+    <h2>シメルー島を体験する</h2>
+
+  <div class="video-grid">
+
+  <div class="youtube-lite" data-video="x_DtSGkJFww">
+    <img
+      src="https://i.ytimg.com/vi/x_DtSGkJFww/hqdefault.jpg"
+      alt="Dico Surf Point Simeulue video"
+      loading="lazy">
+    <button class="youtube-play" aria-label="Play Dico Surf Point Simeulue video">▶</button>
+  </div>
+
+  <div class="youtube-lite" data-video="SvWYPvncung">
+    <img
+      src="https://i.ytimg.com/vi/SvWYPvncung/hqdefault.jpg"
+      alt="Dico Surf Point Simeulue experience video"
+      loading="lazy">
+    <button class="youtube-play" aria-label="Play Dico Surf Point Simeulue experience video">▶</button>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+
+    <h2>よくあるご質問</h2>
+
+    <div class="faq-item">
+      <h3>アクセス方法は？</h3>
+      <p>メダンから国内線でシメルー島へお越しください。シメルー島の空港送迎は宿泊料金に含まれます。</p>
+    </div>
+
+    <div class="faq-item">
+  <h3>宿泊料金には何が含まれますか？</h3>
+  <p>朝食・昼食・夕食、飲料水、コーヒー、お茶、スクーターの利用、滞在中お一人様1回のマッサージが含まれます。ダートバイクは追加料金でご利用いただけます。</p>
+</div>
+    
+<div class="faq-item">
+  <h3>サーフボードはレンタルできますか？</h3>
+  <p>はい、サーフボードのレンタルをご利用いただけます。ボードの種類や料金についてはお問い合わせください。</p>
+  
+</div>    
+<div class="faq-item">
+  <h3>メダンからサーフボードを送れますか？</h3>
+  <p>はい、メダンからシメルー島への船便によるサーフボード輸送の手配をお手伝いできます。航空機で運ぶより安くなる場合があります。料金は変動するためお問い合わせください。</p>
+</div>
+    
+    <div class="faq-item">
+      <h3>サーフィンのベストシーズンはいつですか？</h3>
+      <p>シメルー島では一年を通してサーフィンを楽しめます。一般的に3〜10月は大きく安定したうねりが入り、その他の時期は比較的小さくクリーンな波や混雑の少なさが魅力です。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>シメルー島での旅を計画しませんか？</h2>
+<p>Dico Surf Pointチームとともに、島の暮らしとさまざまな波を楽しみましょう。</p>
+<a href="contact-jp.html" class="btn primary">旅の相談をする</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Dico Surf Point • シメルー島、インドネシア</p>
+</footer>
+
+<script>
+
+/* NAV */
+const toggle = document.querySelector(".navbar-toggle");
+const nav = document.querySelector(".navbar");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+/* PREMIUM SLIDESHOW (FADE) */
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function changeSlide() {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+
+setInterval(changeSlide, 6500);
+
+  /* CLICK-TO-LOAD YOUTUBE */
+document.querySelectorAll(".youtube-lite").forEach(video => {
+  video.addEventListener("click", () => {
+    const id = video.dataset.video;
+
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+    iframe.title = "Dico Surf Point YouTube video";
+    iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    video.innerHTML = "";
+    video.appendChild(iframe);
+  }, { once: true });
+});
+  
+
+/* DIRECT WHATSAPP ENQUIRY — no paid booking engine required */
+(function () {
+  const form = document.getElementById('booking-enquiry-form');
+  const checkin = document.getElementById('booking-checkin');
+  const checkout = document.getElementById('booking-checkout');
+  const guests = document.getElementById('booking-guests');
+  const today = new Date();
+  const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+    .toISOString().slice(0, 10);
+  checkin.min = localDate;
+  checkout.min = localDate;
+  // Pre-fill visible dates, especially important for Safari on iPhone.
+  if (!checkin.value) checkin.value = localDate;
+  if (!checkout.value) {
+    const nextDay = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+    checkout.value = [nextDay.getFullYear(), String(nextDay.getMonth() + 1).padStart(2, '0'), String(nextDay.getDate()).padStart(2, '0')].join('-');
+  }
+  checkout.min = checkin.value;
+
+  checkin.addEventListener('change', function () {
+    checkout.min = checkin.value || localDate;
+    if (checkout.value && checkout.value <= checkin.value) checkout.value = '';
+  });
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    if (checkout.value <= checkin.value) {
+      checkout.setCustomValidity('チェックアウトはチェックインより後の日付を選択してください。');
+      checkout.reportValidity();
+      return;
     }
-  </script>
+    checkout.setCustomValidity('');
+    const message = [
+      'こんにちは。宿泊の空室状況を確認したいです。',
+      'チェックイン: ' + checkin.value,
+      'チェックアウト: ' + checkout.value,
+      '人数: ' + guests.value,
+      '空室状況と合計料金を教えてください。よろしくお願いします。'
+    ].join('\n');
+    window.location.href = 'https://wa.me/61466013700?text=' + encodeURIComponent(message);
+  });
+  checkout.addEventListener('change', function () { checkout.setCustomValidity(''); });
+})();
+
+</script>
 </body>
-</html>
+</html>  
