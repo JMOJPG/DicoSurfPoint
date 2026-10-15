@@ -13,6 +13,32 @@
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="jp-style.css">
+
+<style>
+/* Japanese information page only — independent of shared stylesheets */
+.info-page { background:#f7f6f2; padding:0 0 64px !important; }
+.info-page .info-hero { box-sizing:border-box; max-width:1080px; margin:0 auto !important; padding:58px 24px 30px !important; text-align:left !important; background:transparent !important; min-height:0 !important; }
+.info-page .info-hero h1 { font-size:clamp(30px,4vw,45px) !important; line-height:1.25 !important; margin:0 0 12px !important; color:#202020 !important; }
+.info-page .info-hero p { font-size:clamp(14px,1.6vw,17px) !important; line-height:1.75 !important; margin:0 !important; color:#656565 !important; }
+.info-page .info-container { box-sizing:border-box; width:100% !important; max-width:1080px !important; margin:0 auto !important; padding:0 24px !important; display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:18px !important; align-items:stretch !important; }
+.info-page .info-card, .info-page .owner-card { box-sizing:border-box; width:100% !important; max-width:none !important; min-width:0 !important; margin:0 !important; padding:27px 29px !important; background:#fff !important; border:1px solid #e9e8e3 !important; border-radius:15px !important; box-shadow:none !important; }
+.info-page .info-card h2, .info-page .owner-card h2 { font-size:clamp(18px,2vw,23px) !important; line-height:1.45 !important; letter-spacing:0 !important; margin:0 0 16px !important; color:#1c1c1c !important; overflow-wrap:anywhere; }
+.info-page .info-card p, .info-page .owner-card p, .info-page .info-card li { font-size:15px !important; font-weight:400 !important; line-height:1.85 !important; letter-spacing:0 !important; color:#595959 !important; overflow-wrap:anywhere; }
+.info-page .info-card p, .info-page .owner-card p { margin:0 0 11px !important; }
+.info-page .info-card p:last-child, .info-page .owner-card p:last-child { margin-bottom:0 !important; }
+.info-page .info-card ul { margin:0 !important; padding-left:1.4em !important; }
+.info-page .info-owner { display:contents !important; }
+.info-page .owner-card { height:100%; }
+@media(max-width:700px) {
+ .info-page .info-hero { padding:38px 20px 23px !important; }
+ .info-page .info-hero h1 { font-size:30px !important; }
+ .info-page .info-hero p { font-size:14px !important; }
+ .info-page .info-container { grid-template-columns:minmax(0,1fr) !important; gap:14px !important; padding:0 18px !important; }
+ .info-page .info-card, .info-page .owner-card { padding:22px 20px !important; border-radius:14px !important; }
+ .info-page .info-card h2, .info-page .owner-card h2 { font-size:20px !important; line-height:1.45 !important; margin-bottom:12px !important; }
+ .info-page .info-card p, .info-page .owner-card p, .info-page .info-card li { font-size:14px !important; line-height:1.8 !important; }
+}
+</style>
 </head>
 <body>
   <!-- HEADER -->
@@ -132,3 +158,4 @@
   </script>
 </body>
 </html>
+
