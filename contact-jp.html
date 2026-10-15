@@ -16,6 +16,17 @@ header{height:88px;background:#fff;display:flex;align-items:center;gap:22px;padd
 .cta{background:#183a31;color:#fff;text-align:center;padding:55px 22px}.cta h2{font-size:clamp(24px,3vw,32px);line-height:1.4;margin:0 0 14px}.cta p{color:#e1eae5;margin:0 auto 25px;max-width:600px}.button{display:inline-block;background:#fff;color:#173b31;text-decoration:none;border-radius:6px;padding:12px 25px;font-weight:750}.footer{background:#111;color:#bbb;text-align:center;padding:25px;font-size:13px}
 @media(max-width:800px){header{height:78px;padding:9px 18px;gap:14px}.logo{width:58px;height:58px}.lang{margin-left:auto}.menu-btn{display:block}.nav{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:15px 24px 22px;box-shadow:0 12px 16px #0002;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:10px 0;border-bottom:1px solid #eee}.hero{min-height:360px}.section{padding:46px 20px}.contact-grid{grid-template-columns:1fr}.contact-card{padding:23px 22px}}
 @media(max-width:390px){.hero h1{font-size:29px}.hero{min-height:330px}.section h2{font-size:25px}.intro{font-size:15px}.contact-card h3{font-size:19px}.contact-card p{font-size:14px}}
+/* Desktop header and hero match activities-jp.html exactly */
+@media (min-width: 801px) {
+  header { height: 96px; padding-left: max(32px, calc((100vw - 1480px)/2)); padding-right: max(32px, calc((100vw - 1480px)/2)); gap: 30px; }
+  .logo { width: 70px; height: 70px; }
+  .lang, .nav a { font-size: 16px; }
+  .nav { gap: 25px; }
+  .hero { min-height: 510px; background-position: center, center 42%; }
+  .hero-inner { width: min(1440px, calc(100% - 64px)); padding: 90px 0; }
+  .hero h1 { font-size: clamp(42px, 4vw, 64px); }
+  .hero p { font-size: 20px; }
+}
 </style>
 </head>
 <body>
@@ -41,8 +52,5 @@ header{height:88px;background:#fff;display:flex;align-items:center;gap:22px;padd
 <footer class="footer">© 2026 Dico Surf Point · シメルー島, インドネシア</footer>
 <script>const button=document.querySelector('.menu-btn');const menu=document.querySelector('.nav');button.addEventListener('click',()=>{const opened=menu.classList.toggle('open');button.setAttribute('aria-expanded',String(opened));});</script>
 </body>
-</html>
-
-
 </html>
 
