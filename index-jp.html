@@ -212,6 +212,19 @@
  .jp-match-header .jp-match-nav {gap:25px!important}
 }
 
+/* Japanese home: mobile hero composition only. Desktop remains unchanged. */
+@media (max-width: 760px) {
+  .hero { min-height: 720px !important; height: 720px !important; overflow: hidden; }
+  .hero-slideshow, .hero-slideshow .slide { height: 100% !important; }
+  .hero-slideshow .slide img { width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center 82% !important; }
+  .hero .hero-overlay { align-items: flex-start !important; }
+  .hero .hero-content { padding-top: 65px !important; padding-bottom: 0 !important; }
+  .hero .hero-booking-bar { bottom: 18px !important; }
+}
+@media (max-width: 355px) {
+  .hero { min-height: 780px !important; height: 780px !important; }
+  .hero .hero-content { padding-top: 55px !important; }
+}
 </style>
 </head>
 
