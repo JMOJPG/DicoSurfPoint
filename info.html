@@ -14,50 +14,84 @@
 
 <link rel="stylesheet" href="style.css" />
 
-  <style>
-  @media (max-width: 768px) {
-    .info-container {
-      grid-template-columns: 1fr !important;
-    }
-  }
-</style>
   
+  
+
+<style>
+/* Header matches activities-jp.html; isolated to these two pages. */
+.jp-match-header, .jp-match-header * {box-sizing:border-box}
+.jp-match-header {height:88px!important;background:#fff!important;display:flex!important;align-items:center!important;gap:22px!important;padding:12px max(22px,calc((100vw - 1160px)/2))!important;position:sticky!important;top:0!important;z-index:10000!important;box-shadow:0 2px 14px #00000012!important;width:100%!important;max-width:none!important;margin:0!important;border:0!important}
+.jp-match-header .jp-match-logo {width:62px!important;height:62px!important;object-fit:contain!important;max-width:none!important;display:block!important;margin:0!important}
+.jp-match-header .jp-match-logo-link {display:block!important;flex:none!important;padding:0!important;margin:0!important}
+.jp-match-header .jp-match-lang {margin-left:auto!important;white-space:nowrap!important;font-size:14px!important;font-weight:400!important;line-height:1.75!important;position:static!important;display:block!important;padding:0!important}
+.jp-match-header .jp-match-lang a {text-decoration:none!important;color:inherit!important;font-size:inherit!important;font-weight:400!important}
+.jp-match-header .jp-match-lang .current {font-weight:900!important;text-decoration:underline!important;text-underline-offset:3px!important}
+.jp-match-header .jp-match-nav {display:flex!important;align-items:center!important;gap:20px!important;position:static!important;background:transparent!important;padding:0!important;margin:0!important;width:auto!important;box-shadow:none!important;flex-direction:row!important}
+.jp-match-header .jp-match-nav a {text-decoration:none!important;color:inherit!important;font-size:14px!important;font-weight:600!important;padding:0!important;margin:0!important;border:0!important;white-space:nowrap!important}
+.jp-match-header .jp-match-nav a:hover,.jp-match-header .jp-match-lang a:hover {color:#bb6c27!important}
+.jp-match-header .jp-match-menu {display:none!important;border:0!important;background:transparent!important;padding:10px!important;cursor:pointer!important;margin:0!important;position:static!important;box-shadow:none!important;min-width:0!important;width:auto!important;height:auto!important}
+.jp-match-header .jp-match-menu span {display:block!important;width:27px!important;height:3px!important;background:#222!important;margin:5px 0!important;border-radius:2px!important}
+@media(max-width:800px){
+ .jp-match-header {height:78px!important;padding:9px 18px!important;gap:14px!important}
+ .jp-match-header .jp-match-logo {width:58px!important;height:58px!important}
+ .jp-match-header .jp-match-menu {display:block!important}
+ .jp-match-header .jp-match-nav {display:none!important;position:absolute!important;top:78px!important;left:0!important;right:0!important;background:#fff!important;padding:15px 24px 22px!important;box-shadow:0 12px 16px #0002!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;width:100%!important}
+ .jp-match-header .jp-match-nav.open {display:flex!important}
+ .jp-match-header .jp-match-nav a {padding:10px 0!important;border-bottom:1px solid #eee!important}
+}
+@media(min-width:801px){
+ .jp-match-header {height:96px!important;padding-left:max(32px,calc((100vw - 1480px)/2))!important;padding-right:max(32px,calc((100vw - 1480px)/2))!important;gap:30px!important}
+ .jp-match-header .jp-match-logo {width:70px!important;height:70px!important}
+ .jp-match-header .jp-match-lang,.jp-match-header .jp-match-nav a {font-size:16px!important}
+ .jp-match-header .jp-match-nav {gap:25px!important}
+}
+
+
+/* English Information layout: consistent with Japanese page */
+.en-info-hero{min-height:400px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.22)),url('24.JPG') center 42%/cover no-repeat;color:#fff}
+.en-info-hero-inner{width:min(1100px,calc(100% - 44px));margin:auto;padding:75px 0}
+.en-info-eyebrow{font-size:14px;letter-spacing:.14em;font-weight:700;color:#fff}
+.en-info-hero h1{font-size:clamp(32px,4.5vw,56px);line-height:1.2;margin:12px 0 18px;color:#fff}
+.en-info-hero p{font-size:clamp(15px,1.8vw,19px);line-height:1.6;margin:0;max-width:680px;color:#fff}
+@media(min-width:801px){.en-info-hero{min-height:510px}.en-info-hero-inner{width:min(1440px,calc(100% - 64px));padding:90px 0}.en-info-hero h1{font-size:clamp(42px,4vw,64px)}.en-info-hero p{font-size:20px}}
+@media(max-width:800px){.en-info-hero{min-height:360px}}
+@media(max-width:390px){.en-info-hero{min-height:330px}.en-info-hero h1{font-size:29px}}
+.info-page{background:#f7f6f2!important;padding:42px 0 65px!important;margin:0!important;max-width:none!important}
+.info-page .info-container{box-sizing:border-box;width:100%!important;max-width:1100px!important;margin:0 auto!important;padding:0 24px!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important;align-items:stretch!important}
+.info-page .info-card{box-sizing:border-box;width:100%!important;min-width:0!important;max-width:none!important;margin:0!important;padding:27px 29px!important;background:#fff!important;border:1px solid #e9e8e3!important;border-radius:15px!important;box-shadow:none!important}
+.info-page .info-card h2{font-size:clamp(19px,2vw,25px)!important;line-height:1.35!important;letter-spacing:0!important;margin:0 0 16px!important;color:#1c1c1c!important;overflow-wrap:anywhere}
+.info-page .info-card p,.info-page .info-card li{font-size:15px!important;font-weight:400!important;line-height:1.8!important;color:#595959!important;overflow-wrap:anywhere}
+.info-page .info-card p{margin:0 0 11px!important}
+.info-page .info-card p:last-child{margin-bottom:0!important}
+.info-page .info-card ul{margin:0!important;padding-left:1.4em!important}
+@media(max-width:700px){.info-page{padding:26px 0 45px!important}.info-page .info-container{grid-template-columns:minmax(0,1fr)!important;gap:14px!important;padding:0 18px!important}.info-page .info-card{padding:22px 20px!important;border-radius:14px!important}.info-page .info-card h2{font-size:20px!important;margin-bottom:12px!important}.info-page .info-card p,.info-page .info-card li{font-size:14px!important;line-height:1.8!important}}
+
+</style>
 </head>
-
 <body>
-
 <!-- HEADER -->
-<header class="header">
-  <a href="index.html" class="logo-link">
-    <img src="DSL.png.png" class="logo" alt="Dico Surf Point">
-  </a>
-
-  <div class="navbar-toggle">
-    <span></span><span></span><span></span>
-  </div>
-
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="rooms.html">Rooms</a>
-    <a href="activities.html">Activities</a>
-    <a href="info.html">Info</a>
-    <a href="contact.html" class="nav-cta">Plan Your Trip</a>
-  </nav>
+<header class="jp-match-header">
+<a class="jp-match-logo-link" href="index.html" aria-label="Home"><img class="jp-match-logo" src="DSL.png.png" alt="Dico Surf Point"></a>
+<div class="jp-match-lang"><a class="current" href="info.html" lang="en" aria-current="page">EN</a> &nbsp;|&nbsp; <a href="info-jp.html" lang="ja">JP</a></div>
+<button class="jp-match-menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="jp-match-navigation"><span></span><span></span><span></span></button>
+<nav id="jp-match-navigation" class="jp-match-nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="rooms.html">Rooms</a>
+<a href="activities.html">Activities</a>
+<a href="info.html" aria-current="page">Info</a>
+<a href="contact.html">Book Now</a>
+</nav>
 </header>
 
-<!-- INTRO -->
-<section style="padding: 90px 20px 35px; margin: 0; position: static; transform: none;">
-  <div style="max-width: 1200px; margin: 0 auto; position: static; transform: none;">
-    <h1 style="position: static; transform: none; margin: 0 0 15px; font-size: 30px; line-height: 1.15;">
-      Before You Travel
-    </h1>
-    <p style="position: static; transform: none; margin: 0; font-size: 17px; line-height: 1.6;">
-      Here’s everything you need to know to plan your stay at Dico Surf Point — from surf conditions to travel logistics and what to bring.
-    </p>
-  </div>
+<!-- HERO -->
+<section class="en-info-hero" aria-labelledby="info-hero-title">
+ <div class="en-info-hero-inner">
+  <div class="en-info-eyebrow">DICO SURF POINT · SIMEULUE</div>
+  <h1 id="info-hero-title">Before You Travel</h1>
+  <p>Everything you need to plan your stay, from surf conditions and travel logistics to what to bring.</p>
+ </div>
 </section>
-  
-<section class="info-page" style="margin-top: -60px;">
+<section class="info-page" >
  <div class="info-container" style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18px; max-width:1200px; margin:0 auto;">
 
     <div class="info-card">
@@ -174,17 +208,13 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Dico Surf Point • Simeulue, Indonesia</p>
+  <p>© 2026 Dico Surf Point • Simeulue, Indonesia</p>
 </footer>
 
 <script>
-const toggle = document.querySelector(".navbar-toggle");
-const nav = document.querySelector(".navbar");
-
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
+const toggle=document.querySelector('.jp-match-menu');
+const nav=document.querySelector('.jp-match-nav');
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
 </script>
-
 </body>
-</html
+</html>
