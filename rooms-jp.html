@@ -140,6 +140,25 @@ footer p {color:#eee8df!important;font-family:Arial,sans-serif;font-size:13px;ma
  .rooms-jp-content section.cta {padding:55px 20px!important;}
 }
 </style>
+<style>
+/* Mobile-only finishing touches: gallery balance and booking heading */
+@media (max-width: 768px) {
+  .rooms-jp-content .lifestyle-grid > img:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 320px);
+  }
+  .rooms-jp-content section.cta h2 {
+    font-size: clamp(23px, 5.7vw, 29px) !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: normal;
+    word-break: normal;
+    max-width: 22em;
+    margin: 0 auto 22px;
+  }
+}
+</style>
 </head>
 <body>
   <!-- HEADER: same navigation structure as Japanese homepage -->
