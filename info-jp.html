@@ -40,6 +40,23 @@
 /* Information page content, isolated from other pages */
 .info-page{background:#f8f6f1;padding:0 0 72px}.info-container{width:min(1100px,calc(100% - 44px));margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.info-card,.owner-card{background:white;border:1px solid #e9e8e3;border-radius:15px;padding:28px;min-width:0}.info-card h2,.owner-card h2{font-size:clamp(18px,2vw,23px);line-height:1.5;margin:0 0 16px;font-weight:750}.info-card p,.owner-card p,.info-card li{font-size:15px;line-height:1.85;color:#595959;overflow-wrap:anywhere}.info-card p,.owner-card p{margin:0 0 12px}.info-card p:last-child,.owner-card p:last-child{margin-bottom:0}.info-card ul{margin:0;padding-left:1.4em}.info-owner{display:contents}.owner-card{height:100%}
 @media(max-width:800px){.info-container{grid-template-columns:1fr;gap:14px;width:calc(100% - 36px)}.info-card,.owner-card{padding:22px 20px}.info-card h2,.owner-card h2{font-size:20px;margin-bottom:12px}.info-card p,.owner-card p,.info-card li{font-size:14px;line-height:1.8}}
+
+/* Dico Surf Point unified Information page styling */
+body{background:#f7f4ef;color:#29251f}
+.hero h1,.info-card h2,.owner-card h2,.cta h2{font-family:Georgia,"Hiragino Mincho ProN","Yu Mincho", "Noto Serif JP",serif;font-weight:400;letter-spacing:.025em}
+.hero h1{font-weight:400!important;line-height:1.3}
+.info-page{background:#f7f4ef;padding:42px 0 72px}
+.info-card,.owner-card{background:#fff;border:1px solid #e8e1d7;border-radius:15px;box-shadow:0 3px 16px rgba(41,37,31,.035)}
+.info-card h2,.owner-card h2{font-weight:400;color:#29251f}
+.info-card p,.owner-card p,.info-card li{color:#57514a}
+.cta{background:#f7f4ef;color:#29251f;padding:70px 22px 78px}
+.cta h2{font-weight:400}
+.cta p{color:#635d55}
+.button{background:#ad7044;color:#fff;border-radius:6px;font-weight:600;padding:14px 28px}
+.button:hover{background:#945b34}
+.footer{background:#29251f;color:#e0d9cf;padding:29px 20px}
+.footer p{margin:0}
+@media(max-width:800px){.info-page{padding:26px 0 48px}.cta{padding:54px 20px 62px}}
 </style>
 </head>
 <body>
@@ -49,7 +66,7 @@
 <div class="lang"><a href="info.html" lang="en">EN</a>  |  <a class="current" href="info-jp.html" lang="ja">JP</a></div>
 <button aria-controls="jp-navigation" aria-expanded="false" aria-label="メニューを開く" class="menu-btn" type="button"><span></span><span></span><span></span></button>
 <nav aria-label="メインメニュー" class="nav" id="jp-navigation">
-<a href="index-jp.html">ホーム</a><a href="rooms-jp.html">客室</a><a href="activities-jp.html">アクティビティ</a><a aria-current="page" href="info-jp.html">情報</a><a href="contact-jp.html">お問い合わせ</a>
+<a href="index-jp.html">ホーム</a><a href="rooms-jp.html">客室</a><a href="activities-jp.html">アクティビティ</a><a href="offers-jp.html">特別プラン</a><a aria-current="page" href="info-jp.html">情報</a><a href="contact-jp.html">お問い合わせ</a>
 </nav>
 </header>
 <!-- INFO PAGE -->
