@@ -102,6 +102,44 @@ body {font-family:Arial,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif!impor
 footer {background:#29251f!important;color:#eee8df!important;padding:25px 20px!important;text-align:center;}
 footer p {color:#eee8df!important;font-family:Arial,sans-serif;font-size:13px;margin:0;}
 </style>
+
+<style>
+/* Japanese Rooms: match English Rooms section layout */
+.rooms-jp-content {background:#f7f4ef!important; padding-top:0!important;}
+.rooms-jp-content .jp-room-section {max-width:1200px; margin:0 auto; padding:35px 24px 55px;}
+.rooms-jp-content .intro {padding-top:35px; padding-bottom:45px;}
+.rooms-jp-content h2 {font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif!important; font-size:clamp(28px,4vw,40px); font-weight:400!important; letter-spacing:.035em; line-height:1.4; margin:0 0 25px; color:#292820;}
+.rooms-jp-content p {font-size:17px; line-height:1.8; color:#777;}
+.rooms-jp-content .intro p {max-width:850px; margin:0; font-size:18px;}
+.rooms-jp-content .jp-room-grid {display:grid; gap:18px;}
+.rooms-jp-content .jp-room-grid.two {grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:950px;margin:0 auto;}
+.rooms-jp-content .jp-room-grid.two img {width:100%;height:300px;object-fit:cover;border-radius:16px;display:block;}
+.rooms-jp-content .room-description {max-width:850px;margin:25px auto 0;}
+.rooms-jp-content .lifestyle {padding-top:45px;padding-bottom:60px;}
+.rooms-jp-content .lifestyle h2 {margin-bottom:10px;}
+.rooms-jp-content .lifestyle p {margin:0 0 30px;font-size:18px;}
+.rooms-jp-content .lifestyle-grid {grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+.rooms-jp-content .lifestyle-grid img {width:100%;height:220px;object-fit:cover;border-radius:14px;cursor:pointer;}
+.rooms-jp-content .included-section {padding-top:45px;padding-bottom:65px;}
+.rooms-jp-content .included-card {background:#fff;border-radius:20px;padding:clamp(28px,5vw,50px);box-shadow:0 8px 30px rgba(0,0,0,.05);}
+.rooms-jp-content .included-card h2 {margin-bottom:28px;}
+.rooms-jp-content .included-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 35px;font-size:18px;line-height:1.6;}
+.rooms-jp-content .included-card p {margin:28px 0 0;font-size:16px;line-height:1.7;}
+.rooms-jp-content section.cta {max-width:none!important;background:#eee8df!important;text-align:center;padding:75px 20px!important;}
+.rooms-jp-content section.cta h2 {font-size:clamp(30px,4vw,43px);margin:0 0 20px;}
+.rooms-jp-content section.cta .btn {display:inline-block;background:#ad7044!important;color:#fff!important;padding:13px 28px;border-radius:3px;text-decoration:none;font-size:14px;font-weight:700;font-family:Arial,"Yu Gothic",sans-serif;}
+.rooms-jp-content section.cta .btn:hover {background:#885332!important;}
+#lightbox {display:none;position:fixed;inset:0;z-index:20000;background:rgba(0,0,0,.88);align-items:center;justify-content:center;cursor:zoom-out;padding:20px;}
+#lightbox img {max-width:95vw;max-height:90vh;object-fit:contain;}
+@media(max-width:768px) {
+ .rooms-jp-content .jp-room-section {padding-left:18px;padding-right:18px;}
+ .rooms-jp-content h2 {font-size:clamp(25px,7vw,32px);}
+ .rooms-jp-content p {font-size:16px;}
+ .rooms-jp-content .jp-room-grid.two {grid-template-columns:1fr;}
+ .rooms-jp-content .lifestyle-grid {grid-template-columns:repeat(auto-fit,minmax(150px,1fr));}
+ .rooms-jp-content section.cta {padding:55px 20px!important;}
+}
+</style>
 </head>
 <body>
   <!-- HEADER: same navigation structure as Japanese homepage -->
@@ -121,56 +159,69 @@ footer p {color:#eee8df!important;font-family:Arial,sans-serif;font-size:13px;ma
 
   <section class="jp-rooms-hero" aria-labelledby="rooms-hero-title"><div class="jp-rooms-hero-inner"><div class="jp-rooms-eyebrow">DICO SURF POINT · SIMEULUE</div><h1 id="rooms-hero-title">客室のご案内</h1><p>海辺でくつろぐ、シメルー島の快適な滞在。</p></div></section>
 <main class="rooms-jp-content">
-  <!-- ROOMS OVERVIEW -->
-  <section class="overview">
-        <h3 class="rooms-subtitle">海辺の快適な客室</h3>
-    <p>
-      友人同士、カップル、小さなご家族にもおすすめの客室は、
-      旅行やサーフィンで疲れた後にゆったりとくつろげる快適な空間です。
-      各客室には快適なベッド、エアコン、広々とした収納スペースが備わっており、
-      次のサーフィンセッションに向けてしっかりと充電できます。
-      海の景色と新鮮な空気で目覚める贅沢なひとときをお楽しみください。
-    </p>
-
-    <!-- PRICING -->
-    <section class="pricing">
-      <h2>客室料金</h2>
-      <div class="price-card">
-        <h3>宿泊料金・空室状況</h3>
-        <div class="price">料金はお問い合わせください</div>
-        <ul class="price-includes">
-          <li>✔ 空港送迎付き</li>
-          <li>✔ 1日3食付き</li>
-          <li>✔ スクーターレンタル込み</li>
-          <li>✔ オプションでサーフガイド可</li>
-          <li>✔ 快適な客室</li>
-        </ul>
-        <p class="price-note">宿泊料金と空室状況はWhatsAppでお気軽にお問い合わせください。</p>
-        <a href="contact-jp.html" class="btn">お問い合わせ・予約</a>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="gallery">
-      <h2>客室ギャラリー</h2>
-      <p>島の自然光と海風を感じられる快適な客室。</p>
-
-      <div class="room-photo-grid">
-        <figure><img src="40.JPG" alt="Dico Surf Pointのオーシャンビュールーム" loading="lazy"><figcaption>オーシャンビュールーム</figcaption></figure>
-        <figure><img src="44.jpeg" alt="Dico Surf Pointのガーデンバンガロー" loading="lazy"><figcaption>ガーデンバンガロー</figcaption></figure>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <a href="contact-jp.html" class="btn cta-btn" style="margin-top: 30px; display: inline-block;">ご予約はこちら</a>
-  </section>
-
-  </main>
+<!-- INTRO -->
+<section class="jp-room-section intro">
+  <h2>客室のご案内</h2>
+  <p>カップル、ご家族、ご友人同士、そしてサーファーの皆さまに。シンプルで快適な客室をご用意しています。サーフィンの合間にゆっくり休み、シメルー島での暮らしをお楽しみください。</p>
+</section>
+<!-- ROOM 1 -->
+<section class="jp-room-section">
+  <h2>2〜4名様用のお部屋</h2>
+  <div class="jp-room-grid two">
+    <img src="40.JPG" loading="lazy" alt="Dico Surf Pointの2〜4名様用客室の外観">
+    <img src="41.JPG" loading="lazy" alt="Dico Surf Pointの2〜4名様用客室">
+  </div>
+  <p class="room-description">カップル、ご家族、ご友人同士や少人数のグループにおすすめのお部屋です。島のサーフポイントやローカルな暮らしを楽しみながら、ゆったりとお過ごしいただけます。</p>
+</section>
+<!-- ROOM 2 -->
+<section class="jp-room-section">
+  <h2>4〜6名様用のお部屋</h2>
+  <div class="jp-room-grid two">
+    <img src="43.jpeg" loading="lazy" alt="Dico Surf Pointの4〜6名様用客室">
+    <img src="44.jpeg" loading="lazy" alt="ご家族やグループ向けの広い客室">
+  </div>
+  <p class="room-description">ご家族やご友人のグループ、サーフトリップにぴったりの広めのお部屋です。シメルー島でサーフィンや観光を楽しんだ後も、皆さまでくつろげます。</p>
+</section>
+<!-- LIFESTYLE GALLERY -->
+<section class="jp-room-section lifestyle">
+  <h2>ロッジでのひととき</h2>
+  <p>サーフィンの合間に楽しむ、シンプルで穏やかな島時間。</p>
+  <div class="jp-room-grid lifestyle-grid">
+    <img src="39.jpeg" loading="lazy" alt="シメルー島でのロッジ生活" onclick="openLightbox(this.src)">
+    <img src="42.jpeg" loading="lazy" alt="Dico Surf Pointでのくつろぎの時間" onclick="openLightbox(this.src)">
+    <img src="45.jpg" loading="lazy" alt="Dico Surf Pointのロッジの様子" onclick="openLightbox(this.src)">
+    <img src="46.JPG" loading="lazy" alt="シメルー島のサーフロッジでの生活" onclick="openLightbox(this.src)">
+    <img src="47.jpg" loading="lazy" alt="シメルー島での宿泊体験" onclick="openLightbox(this.src)">
+  </div>
+</section>
+<!-- WHAT'S INCLUDED -->
+<section class="jp-room-section included-section">
+  <div class="included-card">
+    <h2>宿泊料金に含まれるもの</h2>
+    <div class="included-grid">
+      <div>✓ 空港送迎</div>
+      <div>✓ インドネシア料理の1日3食</div>
+      <div>✓ 島内移動用スクーター</div>
+      <div>✓ サーフガイドのご案内が可能</div>
+      <div>✓ 寝具・基本アメニティ</div>
+      <div>✓ 飲料水・コーヒー・紅茶</div>
+    </div>
+    <p>ベジタリアン、魚や肉を使わないお食事などのご希望は、事前にご相談いただければ可能な範囲で対応いたします。</p>
+  </div>
+</section>
+<!-- CTA -->
+<section class="cta">
+  <h2>シメルー島への旅を計画しませんか？</h2>
+  <a href="contact-jp.html" class="btn">旅のご相談・ご予約</a>
+</section>
+</main>
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 Dico Surf Point • シメルー島, インドネシア</p>
   </footer>
 
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" alt="拡大写真"></div>
   <!-- SCRIPTS -->
   <script>
     // MOBILE MENU TOGGLE
@@ -181,6 +232,13 @@ footer p {color:#eee8df!important;font-family:Arial,sans-serif;font-size:13px;ma
   toggle.setAttribute("aria-expanded", String(opened));
     });
 
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
   </script>
 </body>
 </html>
