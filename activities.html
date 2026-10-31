@@ -60,6 +60,34 @@
 .en-activities-content .activity-card p{margin:0;line-height:1.6}
 
 </style>
+<style>
+/* Activities design alignment — page-specific, shared styles untouched */
+body { background:#f7f4ef!important; color:#292820; font-family:Arial,sans-serif!important; }
+.en-activities-content { background:#f7f4ef!important; }
+.en-activities-content h2, .en-activities-content h3 {font-family:Georgia,serif!important;font-weight:400!important;letter-spacing:.025em;color:#292820;line-height:1.35;}
+.en-activities-content h2 {font-size:clamp(28px,3.5vw,40px)!important;}
+.en-activities-content p {color:#777;line-height:1.8!important;}
+.en-activities-content .activity-card {background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.045);}
+.en-activities-content .activity-card img {border-radius:16px 16px 0 0!important;width:100%;}
+.en-activities-content .activity-card .card-content {padding:20px 22px 25px!important;}
+.en-activities-content .activity-card h3 {font-size:24px;margin:0 0 10px;}
+.en-activities-content .activity-card p {font-size:16px;}
+.en-activities-content .video-section .container {max-width:1200px;margin:0 auto;}
+.en-activities-content .video-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+.en-activities-content .video-grid iframe {display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:14px;}
+.en-activities-content section.cta {background:#eee8df!important;color:#292820!important;max-width:none!important;text-align:center;padding:75px 20px!important;}
+.en-activities-content section.cta h2 {font-size:clamp(30px,4vw,43px)!important;margin:0 0 20px;color:#292820!important;}
+.en-activities-content section.cta .btn {display:inline-block;background:#ad7044!important;color:#fff!important;padding:13px 28px!important;border-radius:3px;text-decoration:none;font-size:14px;font-weight:700;}
+.en-activities-content section.cta .btn:hover {background:#885332!important;}
+footer {background:#29251f!important;color:#eee8df!important;padding:25px 20px!important;text-align:center;}
+footer p {color:#eee8df!important;font-family:Arial,sans-serif;font-size:13px;margin:0;}
+@media(max-width:768px) {
+ .en-activities-content .video-grid {grid-template-columns:1fr;}
+ .en-activities-content section.cta {padding:55px 20px!important;}
+ .en-activities-content section.cta h2 {font-size:clamp(24px,6.2vw,32px)!important;}
+ .en-activities-content .activity-card .card-content {padding:18px!important;}
+}
+</style>
 </head>
 
 <body>
@@ -73,6 +101,7 @@
 <a href="index.html">Home</a>
 <a href="rooms.html">Rooms</a>
 <a href="activities.html" aria-current="page">Activities</a>
+<a href="offers.html">Offers</a>
 <a href="info.html">Info</a>
 <a href="contact.html">Book Now</a>
 </nav>
